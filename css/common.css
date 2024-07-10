@@ -3,6 +3,10 @@ body {
     margin: 0;
     background: white;
 }
+::selection{
+    color: indigo;
+    background: pink;
+}
 .navbar {
     background-image: url('../images/bg.png');
     position: sticky;
