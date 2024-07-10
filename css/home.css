@@ -1,0 +1,183 @@
+.header{
+    background-image: url("../images/environ.gif");
+    background-size: cover;
+    position: relative;
+    background-position: center;
+}
+.overlay {
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,0.5);
+}
+.description {
+    left: 50%;
+    position: absolute;
+    top: 0%;
+    transform: translate(-0, +25%);
+    text-align: center;
+}
+.description h1 {
+    color: yellow;
+    font-size: 3rem;
+    font-family: Exo;
+}
+.description p {
+    color: #fff;
+    font-size: 1.3rem;
+    line-height: 1.5;
+}
+.flexStor{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: stretch;
+    justify-content: space-evenly;
+    height: max-content;
+   
+}
+.flexIn{
+    width: 20%;
+    padding: 20px;
+    font-size: 1.2rem;
+    font-family: cursive;
+    font-weight: bold;
+    color: #000;
+    /*border-bottom: none;*/
+    border: 0.25rem transparent; 
+    border-bottom-left-radius: 30%; 
+    border-top-right-radius: 30%;
+    text-align: left;
+}
+
+.flexIn a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: cursive;
+    font-weight: bold;
+    color: #000;
+    
+}
+
+.flexIn:hover a{
+    color: white;
+    transform: scale(1.2);
+}
+
+.flexIn img{
+    border: 0.0 transparent; 
+    border-bottom-left-radius: 30%; 
+    border-top-right-radius: 30%;
+}
+
+#f1:hover{
+    border: 0.25rem solid; 
+    border-color: rgb(152, 238, 238);
+    background-color: rgb(77, 122, 122) !important; 
+    color: white;
+}
+
+#fl:hover a{
+    color: white;
+}
+
+#f2:hover{
+    border: 0.25rem solid; 
+    border-color: #e28ab9;
+    background-color: #895370 !important; 
+    color: white;
+}
+
+#f3:hover{
+    border: 0.25rem solid; 
+    border-color: #9aee9a;
+    background-color: #4e7a4e !important; 
+    color: white;
+}
+
+#f4:hover{
+    border: 0.25rem solid; 
+    border-color: rgb(230, 195, 130);
+    background-color: rgb(136, 115, 75) !important; 
+    color: white;
+}
+
+.flexIn:hover{
+    background-color: #fff !important;
+    cursor: pointer;
+    transform: scale(1.2);
+}
+.flexIm{
+    width: 20%;
+    padding: 20px;
+    border: 20px solid white;
+    aspect-ratio: 4/3;
+    font-size: 1vw;
+    /*border-top: none;*/
+}
+@media (max-width: 800px) {
+    .flexIn, .flexIm {
+        width: 40%; /* Adjust width for smaller screens */
+    }
+}
+
+@media (max-width: 500px) {
+    .flexIn, .flexIm {
+        width: 80%; /* Adjust width for even smaller screens */
+    }
+}
+.features {
+    margin: 4em auto;
+    padding: 1em;
+    position: relative;
+    text-align: center;
+    background-color: #000;
+}
+.feature-title {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+.features img {
+    -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+    margin-bottom:0;
+    width: 20%;
+    border: 0.5rem solid black;
+    border-radius: 30%;
+}
+.carousel-inner{
+    height: 500px;
+    width: 50%;
+    margin-left: 25%;
+    border-radius: 50px;
+    margin-top:0;
+}
+
+.carousel-slide button{
+    color: #000;
+}
+.carousel-item img {
+    width: 100%;
+    height: 500px;
+}
+
+.carousel-caption{
+    bottom: 150px;
+    color: white;
+    font-weight: bolder;
+    position: relative;
+    top: 50%;
+    transform: translate(-15%,-0.5%);
+}
+#carouselExampleCaptions{
+    background-color: transparent;
+}
+.carousel-slide{
+    background-color: transparent;
+}
