@@ -181,3 +181,9 @@
 .carousel-slide{
     background-color: transparent;
 }
+.cust1{
+    display: inline;
+    display: inline-block;
+    background-color: pink;
+    color: indigo;
+}
