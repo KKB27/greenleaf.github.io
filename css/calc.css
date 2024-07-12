@@ -1,0 +1,114 @@
+body {
+    background-image: linear-gradient(60deg, rgba(242, 255, 32, 1), rgba(198, 221, 14, 0.7), rgba(138, 191, 20, 0.8), rgba(60,109,14, 0.9), rgba(21, 71, 6, 1));
+    background-repeat: no-repeat;
+}
+
+.carousel-inner{
+    height:300px;
+    width: 30%;
+    margin-left: 35%;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.carousel-item img{
+    width:100%;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.choice{
+    display: none;
+}
+
+.gas{
+    display: none;
+}
+
+h1{
+    text-align: center;
+    font-family: Dancing Script;
+}
+h2{
+    margin: 5%;
+    text-align: center;
+    font-family: Montserrat;
+    font-weight: 400;
+}
+.container-1{
+    display:flex;
+    justify-content: center;
+}
+.item-1{
+    margin: 40px;
+    transition: transform 0.5s;
+}
+.item-1:hover{
+    transform: scale(1.08);
+}
+#ind{
+    background-color: #B7E5D0;
+    }
+#ind:hover{
+    background-color: #087D72;
+    color:white;
+}
+#soc{
+    background-color: #B7E5D0;
+}
+#soc:hover{
+    background-color: #087D72;
+    color: white;
+}
+.user_choice{
+    height:150px;
+    width:150px;
+    border-radius: 20px 0px 20px 0px;
+    font-family: Montserrat;
+    font-size:medium;
+}
+.container-2{
+    display:flex;
+    justify-content: center;
+}
+table{
+border: 1.5px solid white;
+border-collapse: separate;
+ border-color : white; 
+ border-radius:20px 0px 20px 0px ; 
+ margin: auto; 
+}
+.hide{
+    display:none;
+}
+.show{
+    display:block;
+}
+td{
+    padding: 10px;
+}
+
+#submit_but{
+        margin:auto;
+        height: 50px;
+        margin-top:10vh;
+        margin-bottom:5vh;
+        margin-left:37vw;
+        transition: transform 0.5s;
+}
+#submit_but:hover{
+    transform: scale(1.08);
+}
+button{
+    font-family: Montserrat;
+    background-color: #B7E5D0;
+}
+button:hover{
+    background-color: #087D72;
+    color: white;
+}
+.society, .indiv{
+    font-family: Montserrat;
+}
+.result{
+    display: none;
+}
