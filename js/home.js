@@ -10,12 +10,12 @@ function loadSignInPage() {
             // Manually add the sign-in CSS to the document
             const signInStyles = document.createElement('link');
             signInStyles.rel = 'stylesheet';
-            signInStyles.href = '../Sign_in.css'; // Corrected path
+            signInStyles.href = 'Sign_in.css'; // Corrected path
             document.head.appendChild(signInStyles);
 
             // Manually add the sign-in JavaScript to the document
             const signInScript = document.createElement('script');
-            signInScript.src = '../Sign_in.js'; // Corrected path
+            signInScript.src = 'Sign_in.js'; // Corrected path
             document.body.appendChild(signInScript);
         })
         .catch(error => console.error('Error loading sign-in page:', error));
