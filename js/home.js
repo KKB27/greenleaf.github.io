@@ -1,5 +1,6 @@
 // Function to load the sign-in page content
 function loadSignInPage() {
+    // Fetch the HTML content of the sign-in page
     fetch('../html/Sign_in.html')
         .then(response => response.text())
         .then(data => {
@@ -20,7 +21,9 @@ function loadSignInPage() {
         .catch(error => console.error('Error loading sign-in page:', error));
 }
 
+// Set a timeout to load the sign-in page after 5 seconds
 setTimeout(loadSignInPage, 5000);
+
 
 var ready = (callback) => {
     if (document.readyState != "loading") callback();
