@@ -1,7 +1,7 @@
 // Function to load the sign-in page content
 function loadSignInPage() {
     // Fetch the HTML content of the sign-in page
-    fetch('../html/Sign_in.html')
+    fetch('../Sign_in.html')
         .then(response => response.text())
         .then(data => {
             // Inject the fetched content into the sign-in container
@@ -10,12 +10,12 @@ function loadSignInPage() {
             // Manually add the sign-in CSS to the document
             const signInStyles = document.createElement('link');
             signInStyles.rel = 'stylesheet';
-            signInStyles.href = '../css/Sign_in.css';
+            signInStyles.href = '../Sign_in.css';
             document.head.appendChild(signInStyles);
 
             // Manually add the sign-in JavaScript to the document
             const signInScript = document.createElement('script');
-            signInScript.src = 'Sign_in.js';
+            signInScript.src = '../Sign_in.js';
             document.body.appendChild(signInScript);
         })
         .catch(error => console.error('Error loading sign-in page:', error));
