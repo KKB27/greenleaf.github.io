@@ -187,3 +187,12 @@
     background-color: pink;
     color: indigo;
 }
+.but{
+    background-image: linear-gradient(rgb(0, 83, 83),rgb(2, 105, 110),rgb(2, 125, 109));
+    color: white;
+    font-size: 1.4rem;
+    border-radius: 16px;
+    margin: 4px 2px;
+    padding: 10px 20px;
+    text-align: center;
+}
