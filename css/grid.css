@@ -1,0 +1,77 @@
+body{
+    background-color: white;
+}
+#pros h1{
+    color: green;
+    font-size: 1.2rem;
+}
+
+#pros img{
+    width: 50%;
+    aspect-ratio: 4/3;
+}
+
+.grandFlex{
+    display: flex;
+    background-color:rgb(22, 114, 19);
+    border-radius: 10px;
+    border-color: black;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.gridCont{
+    display: flex;
+    background-color: transparent;
+    border-radius: 10px;
+    border-color: black;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    width: 30%;
+    font-size: 1.2rem;
+}
+
+.gridPro{
+    background-color: rgba(255, 255, 255, 0.847);
+    border: 3px solid black;
+    color: black;
+    padding: 20px;
+    border-radius: 2px;
+    margin: 2%;
+}
+
+.gridPro img{
+    width: 80%;
+    aspect-ratio: 4/3;
+}
+
+.soc{
+    background-color: yellow;
+    color: black;
+    font-size: 1.4rem;
+    border-radius: 16px;
+    margin: 4px 2px;
+    padding: 10px 20px;
+    text-align: center;
+    cursor: pointer;
+    border-color: transparent;
+}
+
+.ind{
+    background-color: rgb(2, 96, 94);
+    color: white;
+    font-size: 1.4rem;
+    border-radius: 16px;
+    margin: 4px 2px;
+    padding: 10px 20px;
+    text-align: center;
+    cursor: pointer;
+    border-color: transparent;
+}
+
