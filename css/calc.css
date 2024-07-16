@@ -112,3 +112,29 @@ button:hover{
 .result{
     display: none;
 }
+.meter{
+    border: 0px;
+    border-radius: 0;
+    display:none;
+}
+.arrow{
+    text-align: center;
+    visibility:hidden;
+    padding-bottom: 2px;
+}
+.item-meter{
+    height: 50px;
+    width: 50px;
+}
+#red{
+    background-color: red;
+}
+#orange{
+    background-color: orange;
+}
+#yellow{
+    background-color: gold;
+}
+#green{
+    background-color: green;
+}
