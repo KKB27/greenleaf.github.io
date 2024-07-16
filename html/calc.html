@@ -174,10 +174,33 @@
 
 </table>
 
-
-<button type="submit" id="submit_but">Calculate my carbon footprint</button>
+    <table class="meter">
+    <tr>
+        <td class="arrow" id="arr-g">
+            <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="black">
+                <path d="M440-800v487L216-537l-56 57 320 320 320-320-56-57-224 224v-487h-80Z"/>
+                </svg>
+        </td>
+        <td class="arrow" id="arr-y"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="black">
+            <path d="M440-800v487L216-537l-56 57 320 320 320-320-56-57-224 224v-487h-80Z"/>
+            </svg></td>
+        <td class="arrow" id="arr-o"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="black">
+            <path d="M440-800v487L216-537l-56 57 320 320 320-320-56-57-224 224v-487h-80Z"/>
+            </svg></td>
+        <td class="arrow" id="arr-r"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="black">
+            <path d="M440-800v487L216-537l-56 57 320 320 320-320-56-57-224 224v-487h-80Z"/>
+            </svg></td>
+    </tr>
+    <tr>
+        <td  class= "item-meter" id="green"></td>
+        <td  class= "item-meter" id="yellow"></td>
+        <td  class= "item-meter" id="orange"></td>
+        <td  class= "item-meter" id="red"></td>
+    </tr>
+</table>
 <p id="result"></p>
 
+<button type="submit" id="submit_but">Calculate my carbon footprint</button>
 
 </form>   
     <footer class="page-footer" style="text-align: center;">
