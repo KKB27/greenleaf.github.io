@@ -13,8 +13,7 @@ body{
 
 .grandFlex{
     display: flex;
-    background-image: linear-gradient(90deg,#91beb7,#528f85,#2c645b);
-    border-radius: 10px;
+    background-image: linear-gradient(-90deg,#4682B4,#547692,#7c97ad);
     border-color: black;
     justify-content: center;
     align-items: center;
@@ -22,6 +21,11 @@ body{
     flex-direction: row;
     width: 100%;
     flex-wrap: wrap;
+}
+
+.grandFlex a{
+    text-decoration: none;
+    width: 100%;
 }
 
 .gridCont{
@@ -55,7 +59,7 @@ body{
 }
 
 .soc{
-    background-color: yellow;
+    background-color: #FFD700;
     color: black;
     font-size: 1.4rem;
     border-radius: 16px;
@@ -67,7 +71,7 @@ body{
 }
 
 .ind{
-    background-color: rgb(2, 96, 94);
+    background-color: #8B4513;
     color: white;
     font-size: 1.4rem;
     border-radius: 16px;
