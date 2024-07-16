@@ -117,19 +117,35 @@ function display_result(trunc, names) {
 
         if(trunc>=0 && trunc<=2){
             document.querySelector("#arr-g").style.visibility= "visible";
+            document.querySelector("#arr-y").style.visibility= "hidden";
+            document.querySelector("#arr-o").style.visibility= "hidden";
+            document.querySelector("#arr-r").style.visibility= "hidden";
             res.style.backgroundColor= "green";
+            console.log("green");
         }
         else if(trunc>2 && trunc<=4){
+            document.querySelector("#arr-g").style.visibility= "hidden";
             document.querySelector("#arr-y").style.visibility= "visible";
+            document.querySelector("#arr-o").style.visibility= "hidden";
+            document.querySelector("#arr-r").style.visibility= "hidden";
             res.style.backgroundColor= "#FFBF00";
+            console.log("yelleo");
         }
         else if(trunc>4 && trunc<=8){
+            document.querySelector("#arr-g").style.visibility= "hidden";
+            document.querySelector("#arr-y").style.visibility= "hidden";
             document.querySelector("#arr-o").style.visibility= "visible";
+            document.querySelector("#arr-r").style.visibility= "hidden";
+            console.log("o");
             res.style.backgroundColor= "orange";
         }
         else if(trunc>8){
+            document.querySelector("#arr-g").style.visibility= "hidden";
+            document.querySelector("#arr-y").style.visibility= "hidden";
+            document.querySelector("#arr-o").style.visibility= "hidden";
             document.querySelector("#arr-r").style.visibility= "visible";
             res.style.backgroundColor= "red";
+            console.log("red");
         }
 }
 
