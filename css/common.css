@@ -1,7 +1,7 @@
 body {
     padding: 0;
     margin: 0;
-    background: white;
+    background: #F5F5F5;
     font-family: montserrat;
 }
 ::selection{
@@ -9,28 +9,31 @@ body {
     background: pink;
 }
 .navbar {
-    background-image: url('../images/bg.png');
+    background-color: rgb(47, 171, 47);
     position: sticky;
     top:0;
     font-size: 1.25rem;
-    font-family: playfair display;
+    font-family: merri weather sans;
 }
 .nav-link,
 .navbar-brand {
-    color: #fff;
+    color: white;
     cursor: pointer;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
+    font-weight: 1000;
+    text-decoration: none !important;
 }
 .nav-link {
     margin-right: 1em !important;
 }
+
+.navbar-brand{
+    font-size: 1.9rem;
+}
 .nav-link:hover {
-    color: rgb(241, 105, 209);
-    text-decoration: underline;
-    text-decoration-color: white;
-    text-decoration-thickness: 0.3rem;
-    text-decoration-style:solid;
-    font-size: 1.5rem;
+    color: #8B4513;
+    font-weight:1200 ;
+    font-size: 1.7rem;
 }
 
 a.navbar-brand:hover{
@@ -41,6 +44,7 @@ a.navbar-brand:hover{
 }
 nav{
     position: sticky;
+    background-color: forestgreen;
     top:0;
 }
 .nav-link{
@@ -53,7 +57,7 @@ nav.navbar{
     z-index: 1000;
 }
 .page-footer{
-    background-image: url('../images/bg.png');
+    background-color: forestgreen;
     color: white;
 }
 .page-footer h1{
@@ -61,4 +65,8 @@ nav.navbar{
 }
 .page-footer a:hover{
     color: rgb(241, 105, 209);
+}
+.page-footer img{
+    border-color: transparent !important;
+    width: 5% !important;
 }
