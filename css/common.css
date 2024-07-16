@@ -12,14 +12,14 @@ body {
     background-color: rgb(47, 171, 47) !important;
     position: sticky;
     top:0;
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-family: merri weather sans;
 }
 .nav-link,
 .navbar-brand {
     color: white;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 1000;
     text-decoration: none !important;
 }
@@ -27,13 +27,10 @@ body {
     margin-right: 1em !important;
 }
 
-.navbar-brand{
-    font-size: 1.9rem;
-}
 .nav-link:hover {
     color: #8B4513;
     font-weight:1200 ;
-    font-size: 1.7rem;
+    font-size: 1.2rem;
 }
 
 a.navbar-brand:hover{
