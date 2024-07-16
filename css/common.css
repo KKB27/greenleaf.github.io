@@ -9,7 +9,7 @@ body {
     background: pink;
 }
 .navbar {
-    background-color: rgb(47, 171, 47);
+    background-color: rgb(47, 171, 47) !important;
     position: sticky;
     top:0;
     font-size: 1.25rem;
