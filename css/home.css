@@ -21,13 +21,15 @@
 }
 .description h1 {
     color: #FFD700;
-    font-size: 3rem;
-    font-family: Exo;
+    font-size: 2rem;
+    font-family: merri weather sans;
+    font-weight: bold;
 }
 .description p {
     color: #fff;
-    font-size: 1.3rem;
+    font-size: 1rem;
     line-height: 1.5;
+    font-weight: 200px;
 }
 .flexStor{
     display: flex;
