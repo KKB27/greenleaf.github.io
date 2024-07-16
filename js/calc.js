@@ -110,6 +110,27 @@ function display_result(trunc, names) {
     res.style.fontFamily = "Montserrat";
     res.style.backgroundColor = "red";
     res.style.color = "white";
+    res.style.marginTop= "10px";  
+    document.querySelector(".meter").style.display= "block";
+        document.querySelector(".meter").style.marginLeft= "40%";
+        res.style.fontSize= "1.4rem";     
+
+        if(trunc>=0 && trunc<=2){
+            document.querySelector("#arr-g").style.visibility= "visible";
+            res.style.backgroundColor= "green";
+        }
+        else if(trunc>2 && trunc<=4){
+            document.querySelector("#arr-y").style.visibility= "visible";
+            res.style.backgroundColor= "#FFBF00";
+        }
+        else if(trunc>4 && trunc<=8){
+            document.querySelector("#arr-o").style.visibility= "visible";
+            res.style.backgroundColor= "orange";
+        }
+        else if(trunc>8){
+            document.querySelector("#arr-r").style.visibility= "visible";
+            res.style.backgroundColor= "red";
+        }
 }
 
 function calculate_vehicle_cfp(dropdown) {
