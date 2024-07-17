@@ -48,10 +48,10 @@
     color: #000;
     /*border-bottom: none;*/
     border: 0.25rem transparent; 
-    border-bottom-left-radius: 30%; 
-    border-top-right-radius: 30%;
+    border-bottom-right-radius: 30%; 
+    border-top-left-radius: 30%;
     text-align: left;
-    transition: transform 2s ease-in-out;
+    transition: transform 0.5s ease-in-out;
 }
 
 .flexIn a{
