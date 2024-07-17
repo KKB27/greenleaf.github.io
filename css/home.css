@@ -70,8 +70,8 @@
 
 .flexIn img{
     border: 0.0 transparent; 
-    border-bottom-left-radius: 30%; 
-    border-top-right-radius: 30%;
+    border-bottom-right-radius: 30%; 
+    border-top-left-radius: 30%;
 }
 
 #f1:hover{
