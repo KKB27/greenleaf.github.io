@@ -14,6 +14,7 @@ body {
     top:0;
     font-size: 1.5rem;
     font-family: merri weather sans;
+    
 }
 .nav-link,
 .navbar-brand {
@@ -51,7 +52,7 @@ nav{
 nav.navbar{
     top: 0;
     position: sticky;
-    z-index: 1000;
+    z-index: 10;
 }
 .page-footer{
     background-color: forestgreen;
