@@ -184,7 +184,7 @@
     background-color: transparent;
 }
 .cust1{
-    display: block;
+    display: inline-block;
     background-color: pink;
     color: indigo;
 }
