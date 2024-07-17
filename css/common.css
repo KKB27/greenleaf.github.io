@@ -5,8 +5,8 @@ body {
     font-family: montserrat;
 }
 ::selection{
-    color: indigo;
-    background: pink;
+    color:  #8B4513;
+    background: #FFD700;
 }
 .navbar {
     background-color: rgb(47, 171, 47) !important;
