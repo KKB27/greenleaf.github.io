@@ -51,6 +51,7 @@
     border-bottom-left-radius: 30%; 
     border-top-right-radius: 30%;
     text-align: left;
+    transition: transform 2s ease-in-out;
 }
 
 .flexIn a{
@@ -75,8 +76,8 @@
 
 #f1:hover{
     border: 0.25rem solid; 
-    border-color: rgb(152, 238, 238);
-    background-color: rgb(77, 122, 122) !important; 
+    border-color: #9ACD32;
+    background-color: #2E8B57  !important; 
     color: white;
 }
 
@@ -86,22 +87,22 @@
 
 #f2:hover{
     border: 0.25rem solid; 
-    border-color: #e28ab9;
-    background-color: #895370 !important; 
+    border-color: #9ACD32;
+    background-color: #2E8B57  !important; 
     color: white;
 }
 
 #f3:hover{
     border: 0.25rem solid; 
-    border-color: #9aee9a;
-    background-color: #4e7a4e !important; 
+    border-color: #9ACD32;
+    background-color: #2E8B57  !important; 
     color: white;
 }
 
 #f4:hover{
     border: 0.25rem solid; 
-    border-color: rgb(230, 195, 130);
-    background-color: rgb(136, 115, 75) !important; 
+    border-color: #9ACD32;
+    background-color: #2E8B57  !important; 
     color: white;
 }
 
