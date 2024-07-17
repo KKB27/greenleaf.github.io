@@ -1,8 +1,7 @@
 .header{
-    background-image: url("../images/environ.gif");
-    background-size: cover;
-    position: relative;
-    background-position: center;
+    display:flex;
+    height:auto;
+    width:100%;
 }
 .overlay {
     position: absolute;
