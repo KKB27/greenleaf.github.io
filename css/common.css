@@ -13,7 +13,7 @@ body {
     position: sticky;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
     top:0;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-family: merri weather sans;
     
 }
@@ -24,7 +24,7 @@ body {
 .navbar-brand {
     color: #004800 !important;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 1000;
     text-decoration: none !important;
 }
@@ -35,7 +35,7 @@ body {
 .nav-link:hover {
     color: #8B4513;
     font-weight:1200 ;
-    font-size: 1.7rem;
+    font-size: 1.4rem;
 }
 
 a.navbar-brand:hover{
