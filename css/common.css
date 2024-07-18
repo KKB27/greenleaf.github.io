@@ -18,7 +18,7 @@ body {
     
 }
 .navbar img{
-    border-radius: 10px;
+    border-radius: 50%;
 }
 .nav-link,
 .navbar-brand {
@@ -71,4 +71,5 @@ nav.navbar{
 .page-footer img{
     border-color: transparent !important;
     width: 5% !important;
+    border-radius: 50%;
 }
