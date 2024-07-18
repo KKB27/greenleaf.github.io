@@ -22,7 +22,7 @@ body {
 }
 .nav-link,
 .navbar-brand {
-    color: green !important;
+    color: #004800 !important;
     cursor: pointer;
     font-size: 1.5rem;
     font-weight: 1000;
