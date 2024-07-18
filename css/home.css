@@ -50,16 +50,17 @@
     border-bottom-right-radius: 30%; 
     border-top-left-radius: 30%;
     text-align: center;
-    background-color: green;
+    background-color: #9acd32;
     transition: transform 0.5s ease-in-out;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
 }
 
 .flexIn a{
     text-decoration: none;
     font-size: 1.2rem;
     font-family: cursive;
-    font-weight: bold;
-    color: white;
+    font-weight: bolder;
+    color: #472304;
     
 }
 
@@ -185,8 +186,8 @@
 }
 .cust1{
     display: inline-block;
-    background-color: pink;
-    color: indigo;
+    background-color: #468409;
+    color: white;
 }
 .but{
     background-color: skyblue;
