@@ -17,4 +17,4 @@ function Sign(){
     window.localStorage.setItem("SignIn","true");
 }
 
-setTimeout(checkSign,10,000);
+setTimeout(checkSign,3000);
