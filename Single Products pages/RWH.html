@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <title>Products Zoom Effect</title>
-    <link rel="stylesheet" href="styles_zoomie.css">
+    <link rel="stylesheet" href="Single Products pages/RWH.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
 </head>
@@ -14,16 +14,16 @@
     
     <div class="container"></div>
     <div class="content">
-        <img src="filter.png" alt="Filter" id="enlarge"> 
+        <img src="Single Products pages/images/filter.png" alt="Filter" id="enlarge"> 
         <section class="home">
-            <img src="LeafLeft.png" alt="Left Leaf" class="leafl">
-            <img src="leafRight.png" alt="Right Leaf" class="leafr">
+            <img src="Single Products pages/images/LeafLeft.png" alt="Left Leaf" class="leafl">
+            <img src="Single Products pages/images/leafRight.png" alt="Right Leaf" class="leafr">
         </section> 
     </div>
     
     <div class="images">
-        <img src="filter.png" alt="Filter Small" id="sfilter"> 
-        <img src="components.png" alt="Components" id="comp"> 
+        <img src="Single Products pages/images/filter.png" alt="Filter Small" id="sfilter"> 
+        <img src="Single Products pages/images/components.png" alt="Components" id="comp"> 
     <div class="text">
         <h1>₹10,000</h1>
         <input id="qty" type="number" placeholder="Qty">
@@ -34,7 +34,7 @@
     <h3>Features</h3>
         <img src="separation.png" id="line">
         <div class="vtext">
-        <video class="video" id="vid"controls><source src="RainWaterHarvesting.mp4" type="video/mp4"></video>
+        <video class="video" id="vid"controls><source src="Single Products pages/anim/RainWaterHarvesting.mp4" type="video/mp4"></video>
         <ol class="custom-list">
             <li class="slide-up">Self-Cleaning</li>
             <li class="slide-up">Dual Intensity Rainwater Harvesting Filter</li>
@@ -66,12 +66,12 @@
         var enlarged = document.getElementById("enlarge");
 
         compo.addEventListener("click", function() {
-            enlarged.src = "components.png";
+            enlarged.src = "Single Products pages/images/components.png";
             enlarged.classList.add("enlarged-image");
         });
 
         small.addEventListener("click", function() {
-            enlarged.src = "filter.png";
+            enlarged.src = "Single Products pages/images/filter.png";
         });
 
         const leafl = document.querySelector('.leafl');
