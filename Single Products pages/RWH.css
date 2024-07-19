@@ -16,12 +16,14 @@
 }
 .logo{
     position:fixed;
-    top:0;
+    top:0.9;
     left:50%;
     transform: translateX(-50%);
     font-family: "Cosi times";
     padding: 1em;
     z-index: 1000;
+    background-color: #fff;
+    border-radius: 0 0 50px 50px;
 }
 .container{
     width: 100%;
@@ -111,12 +113,12 @@ h3{
     grid-template-columns: 950px 550px;
     grid-gap: 1px;
 }
-li {
+slide-up {
     list-style: none;
     font-size: 28px;
     line-height: 2.3;
   }
-  li::before {
+  slide-up::before {
     content: url("../Single Products pages/images/drop2.jpg");
     display: inline-block;
     height: 23px;
