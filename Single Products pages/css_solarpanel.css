@@ -115,7 +115,7 @@ li {
     line-height: 2.3;
   }
   li::before {
-    content: url("Single Products pages/images/sun.png");
+    content: url("../Single Products pages/images/sun.png");
     display: inline-block;
     height: 23px;
     width: 20px;
