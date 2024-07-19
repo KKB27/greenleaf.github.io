@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Products-Solarpanel</title>
+    <link rel="stylesheet" href="Single Products pages/css_solarpanel.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <div class="nav"></div>
+    <div class="logo-container">
+        <h2 style="font-size:21.5px;" class="logo">Solar Panel</h2>
+    </div>
+    
+    <div class="container"></div>
+    <div class="content">
+        <img src="Single Products pages/images/solarpanel.png" alt="greenroof" id="enlarge"> 
+        <section class="home">
+            <img src="Single Products pages/images/LeafLeft.png" alt="Left Leaf" class="leafl">
+            <img src="Single Products pages/images/leafRight.png" alt="Right Leaf" class="leafr">
+        </section> 
+    </div>
+    
+    <div class="images">
+        <img src="Single Products pages/images/solarpanel.png" alt="Filter Small" id="small1"> 
+        <img src="Single Products pages/images/solar2.png" alt="Components" id="comp"> 
+    <div class="text">
+        <h1>₹10,000</h1>
+        <input id="qty" type="number" placeholder="Qty">
+        <button id="b1"><a href="#"> Buy Now</button></a>
+    </div>
+    </div>
+   
+    <h3>Features</h3>
+        <img src="separation.png" id="line">
+        <div class="vtext">
+        <video class="video" id="vid"controls><source src="Single Products pages/anim/SolarPanel.mp4" type="video/mp4"></video>
+        <ol class="custom-list">
+            <li class="slide-up">Weather Resistance</li>
+            <li class="slide-up">Customizable Dimensions</li>
+            <li class="slide-up">Seamless Integration</li>
+            <li class="slide-up"> Quick Payback Period</li>
+              <li class="slide-up">High Energy Storage Compatibility</li>
+          
+        </ol>
+    </div>
+    
+</div>
+
+<script>
+        ScrollTrigger.create({
+            animation: gsap.from(".logo", {
+                y: "50vh",
+                scale: 6,
+                yPercent: -50
+            }),
+            scrub: true,
+            trigger: ".content",
+            start: "top bottom",
+            endTrigger: ".content",
+            end: "top center"
+        });
+
+        var compo = document.getElementById("comp");
+        var small = document.getElementById("small1");
+        var enlarged = document.getElementById("enlarge");
+
+        compo.addEventListener("click", function() {
+            enlarged.src = "Single Products pages/images/solar2.png" ;
+            enlarged.classList.add("enlarged-image");
+        });
+
+        small.addEventListener("click", function() {
+            enlarged.src = "Single Products pages/images/solarpanel.png";
+        });
+
+        const leafl = document.querySelector('.leafl');
+        const leafr = document.querySelector('.leafr');
+        const scrollOffset = 100; 
+
+        document.addEventListener('scroll', function() {
+            let value = window.scrollY;
+
+            if (value > scrollOffset) {
+                leafl.style.marginLeft = (-(value - scrollOffset) * 0.35) + 'px';
+                leafr.style.marginRight = (-(value - scrollOffset) * 0.35) + 'px';
+            } else {
+                leafl.style.marginLeft = '0px';
+                leafr.style.marginRight = '0px';
+            }
+        });
+        let observer = new IntersectionObserver((entries,observer)=> {
+            entries.forEach(entry=> {
+                if (entry.isIntersecting) {
+                    entry.target.currentTime=0;
+                    vid.play();
+
+                } 
+                 })
+        });
+        observer.observe(vid);
+
+        
+    </script>
+</body>
+</html>
