@@ -90,7 +90,6 @@ td{
         height: 50px;
         margin-top:10vh;
         margin-bottom:5vh;
-        margin-left:37vw;
         transition: transform 0.5s;
 }
 #submit_but:hover{
