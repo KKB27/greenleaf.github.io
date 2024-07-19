@@ -3,11 +3,6 @@ var ready = (callback) => {
     if (document.readyState !== "loading") callback();
     else document.addEventListener("DOMContentLoaded", callback);
 }
-// Ready function to ensure DOM is loaded before running code
-var ready = (callback) => {
-    if (document.readyState !== "loading") callback();
-    else document.addEventListener("DOMContentLoaded", callback);
-}
 
 var signed = "false";
 window.localStorage.setItem("SignIn",signed);
@@ -22,4 +17,4 @@ function Sign(){
     window.localStorage.setItem("SignIn","true");
 }
 
-setTimeout(checkSign,3000);
+setTimeout(checkSign,10,000);
