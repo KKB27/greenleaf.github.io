@@ -1,48 +1,25 @@
-// Function to load a file
-function loadFile(filePath) {
-    return fetch(filePath)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok ' + response.statusText);
-            }
-            return response.text();
-        });
+// Ready function to ensure DOM is loaded before running code
+var ready = (callback) => {
+    if (document.readyState !== "loading") callback();
+    else document.addEventListener("DOMContentLoaded", callback);
 }
-
-// Function to load all required files
-function loadFiles() {
-    return Promise.all([
-        loadFile('../Sign_in.html'),
-        loadFile('Sign_in.js'),
-        loadFile('../Sign_in.css')
-    ]);
-}
-
 // Ready function to ensure DOM is loaded before running code
 var ready = (callback) => {
     if (document.readyState !== "loading") callback();
     else document.addEventListener("DOMContentLoaded", callback);
 }
 
-ready(() => {
-    loadFiles()
-        .then(([html, js, css]) => {
-            // Insert HTML content
-            document.body.insertAdjacentHTML('beforeend', html);
+var signed = "false";
+window.localStorage.setItem("SignIn",signed);
+function checkSign(){
+    if(window.localStorage.getItem("SignIn") == "false"){
+        document.getElementById("overlay2").style.display = "flex";
+    }
+}
 
-            // Insert CSS content
-            const style = document.createElement('style');
-            style.textContent = css;
-            document.head.appendChild(style);
+function Sign(){
+    document.getElementById("overlay2").style.display = "none";
+    window.localStorage.setItem("SignIn","true");
+}
 
-            // Insert and execute JS content
-            const script = document.createElement('script');
-            script.textContent = js;
-            document.body.appendChild(script);
-
-            console.log('All files loaded and executed');
-        })
-        .catch(error => {
-            console.error('There was a problem with loading the files:', error);
-        });
-});
+setTimeout(checkSign,3000);
