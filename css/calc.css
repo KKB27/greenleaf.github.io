@@ -137,3 +137,7 @@ button:hover{
 #green{
     background-color: green;
 }
+.sub{
+    display: flex;
+    justify-content: center;
+}
