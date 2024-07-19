@@ -16,12 +16,14 @@
 }
 .logo{
     position:fixed;
-    top:0;
+    top:0.9;
     left:50%;
     transform: translateX(-50%);
     font-family: "Cosi times";
     padding: 1em;
     z-index: 1000;
+    background-color: #fff;
+    border-radius: 0 0 50px 50px;
 }
 .container{
     width: 100%;
@@ -43,7 +45,7 @@
     
 }
 .content img{
-    width: 50%; 
+    width: 47%; 
     max-width: 3000px; 
     display: block; 
     margin: 2em auto 1em auto; 
@@ -109,12 +111,12 @@ h3{
     grid-template-columns: 950px 550px;
     grid-gap: 1px;
 }
-li {
+.slide-up {
     list-style: none;
     font-size: 28px;
     line-height: 2.3;
   }
-  li::before {
+  .slide-up::before {
     content: url("../Single Products pages/images/sun.png");
     display: inline-block;
     height: 23px;
@@ -125,8 +127,10 @@ li {
     font-size: 40px;
   }
 #vid{
-     width:120%;
-      height:120% ;
+  width:120%;
+      height:110% ;
+      margin-top: -65px;
+}
 }
 
  .slide-up {
