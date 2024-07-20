@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <title>Products-Solarpanel</title>
+   <title>Products-Rainwater Harvesting Kit</title>
     <link rel="stylesheet" href="../Single Products pages/RWH.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
-    <meta charset="UTF-8">
+   <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <title>Green Leaf</title>
     <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon_io/favicon-16x16.png">
     <link rel="manifest" href="../images/favicon_io/site.webmanifest">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/common.css">
      <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-
 </head>
+<style>
+   
+</style>
 <body>
     <nav class="navbar navbar-expand-md" style="position: sticky;top:0;">
         <a class="navbar-brand" href="../index.html"> &nbsp;<img src="../images/logoMain2.jpg" height="50px"> &nbsp; Green Leaf Solutions</a>
@@ -62,8 +61,8 @@
     </div>
     
     <div class="images">
-        <img src="images/filter.png" alt="Filter Small" id="sfilter"> 
-        <img src="images/components.png" alt="Components" id="comp"> 
+        <img src="../Single Products pages/images/filter.png" alt="Filter Small" id="sfilter"> 
+        <img src="../Single Products pages/images/components.png" alt="Components" id="comp"> 
     <div class="text">
         <h1>₹10,000</h1>
         <input id="qty" type="number" placeholder="Qty">
@@ -72,9 +71,9 @@
     </div>
    
     <h3>Features</h3>
-        <img src="separation.png" id="line">
+        <img src="../Single Products pages/images/separation.png" id="line">
         <div class="vtext">
-        <video class="video" id="vid"controls><source src="anim/RainWaterHarvesting.mp4" type="video/mp4"></video>
+        <video class="video" id="vid"controls><source src="../Single Products pages/anim/RainWaterHarvesting.mp4" type="video/mp4"></video>
         <ol class="custom-list">
             <li class="slide-up">Self-Cleaning</li>
             <li class="slide-up">Dual Intensity Rainwater Harvesting Filter</li>
@@ -105,12 +104,12 @@
         var enlarged = document.getElementById("enlarge");
 
         compo.addEventListener("click", function() {
-            enlarged.src = "images/components.png";
+            enlarged.src = "../Single Products pages/images/components.png";
             enlarged.classList.add("enlarged-image");
         });
 
         small.addEventListener("click", function() {
-            enlarged.src = "images/filter.png";
+            enlarged.src = "../Single Products pages/images/filter.png";
         });
 
         const leafl = document.querySelector('.leafl');
