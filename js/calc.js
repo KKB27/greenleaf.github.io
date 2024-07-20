@@ -173,4 +173,3 @@ function calculate_gas_cfp(gas_val){
         gas_cfp = pipeline * 2.2 * 12; //pipeline is in units std cu. metre and 12 is for yearly amount
     }
 }
-}
