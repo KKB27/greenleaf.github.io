@@ -101,13 +101,13 @@ button:hover {
     justify-content: center;
 }
 
-table {
+/*table {
     border: 1.5px solid white;
     border-collapse: separate;
     border-color: white;
     border-radius: 20px 0px 20px 0px;
     margin: auto;
-}
+}*/
 
 td {
     padding: 10px;
