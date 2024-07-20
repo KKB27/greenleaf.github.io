@@ -84,7 +84,7 @@
 h3{
     text-align: center;
     margin-bottom:-50px ;
-    font-size: 40px;
+    font-size: 50px;
 }
 #b1{
   width: 220px;
@@ -111,12 +111,12 @@ h3{
     grid-template-columns: 950px 550px;
     grid-gap: 1px;
 }
-slide-up {
+.slide-up {
     list-style: none;
     font-size: 28px;
     line-height: 2.3;
   }
-  slide-up::before {
+  .slide-up::before {
     content: url("../Single Products pages/images/plant.jpg");
     display: inline-block;
     height: 23px;
