@@ -53,8 +53,8 @@
    }
 
 .images img{
-    width: 250px;
-    height: 250px;
+    width: 38.4%;
+    aspect-ratio: 1/1;
     border: 1px solid black;
     display: inline;
     box-shadow: #278391b9 10px 10px 10px ;
@@ -89,10 +89,10 @@ h3{
     font-size: 40px;
 }
 #b1{
-  width: 220px;
-  height: 80px;
+  width: 43.6%;
+  aspect-ratio: 11/4;
   border-radius: 20px;
-  font-size:30px;
+  font-size:1rem;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   color:#144623;
   background-color: #37ff73;
