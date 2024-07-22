@@ -31,8 +31,19 @@
                         <legend>Email:</legend>
                         <input type="email" id="email" name="email"><br><br>
                     </fieldset>
-                <button type="button" id="signin" onclick=Sign()>
+                    <fieldset>
+                        <legend>Username:</legend>
+                        <input type="text" id="usnm" name="usnm"><br><br>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Password: </legend>
+                        <input type="password" id="pass" name="pass"><br><br>
+                    </fieldset>
+                <button type="button" id="signin" onclick=Sign() style="float:left;">
                     Sign In
+                </button>
+                <button type="button" id="signup" onclick=Sign2() style="float:left;">
+                    Sign Up
                 </button>
             </form>
         </div>
