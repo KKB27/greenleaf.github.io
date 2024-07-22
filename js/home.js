@@ -17,4 +17,9 @@ function Sign(){
     window.localStorage.setItem("SignIn","true");
 }
 
+function Sign2(){
+    document.getElementById("overlay2").style.display = "none";
+    window.localStorage.setItem("SignIn","true");
+}
+
 setTimeout(checkSign,3000);
