@@ -49,4 +49,4 @@ function Sign2(){
             })
 }
 
-setTimeout(checkSign,3000);
+setTimeout(checkSign,5000);
