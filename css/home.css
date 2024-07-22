@@ -252,8 +252,8 @@ legend {
     background-color: transparent;
     border-radius: 10px;
     border-color:transparent;
-    justify-content: center;
-    align-items: justify;
+    justify-content: space-evenly;
+    align-items: center;
     text-align: center;
     flex-direction: column;
     width: 30%;
