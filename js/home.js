@@ -14,12 +14,39 @@ function checkSign(){
 
 function Sign(){
     document.getElementById("overlay2").style.display = "none";
-    window.localStorage.setItem("SignIn","true");
+    
+    Swal.fire({
+                title: 'Logged In!',
+                text: 'Redirecting You to Website',
+                icon: 'success',
+                //showCancelButton: true,
+                confirmButtonText: 'OK',
+                //cancelButtonText: 'No, cancel!',
+                confirmButtonColor: '#023402',
+                //cancelButtonColor: '#d33'
+            }).then((result) => {
+                if(result.isConfirmed){
+                    window.localStorage.setItem("SignIn","true");
+                }
+            })
 }
 
 function Sign2(){
     document.getElementById("overlay2").style.display = "none";
-    window.localStorage.setItem("SignIn","true");
+     Swal.fire({
+                title: 'Signed Up!',
+                text: 'Redirecting You to Website',
+                icon: 'success',
+                //showCancelButton: true,
+                confirmButtonText: 'OK',
+                //cancelButtonText: 'No, cancel!',
+                confirmButtonColor: '#023402',
+                //cancelButtonColor: '#d33'
+            }).then((result) => {
+                if(result.isConfirmed){
+                    window.localStorage.setItem("SignIn","true");
+                }
+            })
 }
 
 setTimeout(checkSign,3000);
