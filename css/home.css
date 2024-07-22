@@ -260,5 +260,19 @@ legend {
     font-size: 1.2rem;
     padding: 5px;
 }
- 
+
+#login{
+    background-color: #023402;
+    color: white;
+    font-size: 1rem;
+    margin: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
+}
+#signup{
+    background-color: #023402;
+    color: white;
+    font-size: 1rem;
+    margin: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
+}
 
