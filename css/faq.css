@@ -1,3 +1,4 @@
+
 body {
     padding: 0;
     margin: 0;
@@ -105,37 +106,26 @@ body {
     margin-top: 20px;
 }
 
-#faq {
-    background-color: white;
-    padding: 40px;
-    border-radius: 10px;
-    border: 3px solid #a2ee84;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    margin-top: 20px;
-    
+h1{
+    text-align: center;
+    font-family: Rosarivo;
+    padding: 10px;
+}
+h2{
+    text-align: center;
+    font-family: Rosarivo;
+    padding: 10px;
+}
+#related{
+    background-color: #004800;
+    color: aliceblue;
+}
+.accordion-body{
+    font-family: Lora;
+}
+.accordion-button:not(.collapsed) {
+    background-color: rgb(124, 212, 124); 
+    color: rgb(4, 61, 4); 
+    border-color: rgb(106, 218, 106)!important;
 }
 
-.faq-item {
-    margin-bottom: 30px;
-    padding: 20px;
-    background-color: #a2ee84;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.faq-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.faq-item h3 {
-    font-size: 1.8rem;
-    color: #004800;
-    margin-bottom: 10px;
-}
-
-.faq-item p {
-    font-size: 1.2rem;
-    color: #666;
-}
