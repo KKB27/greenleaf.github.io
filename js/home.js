@@ -3,7 +3,9 @@ var ready = (callback) => {
     if (document.readyState !== "loading") callback();
     else document.addEventListener("DOMContentLoaded", callback);
 }
-
+ready(() => {
+    
+})
 var signed = "false";
 window.localStorage.setItem("SignIn",signed);
 function checkSign(){
@@ -14,10 +16,9 @@ function checkSign(){
 
 function Sign(){
     document.getElementById("overlay2").style.display = "none";
-    
     Swal.fire({
                 title: 'Logged In!',
-                text: 'Redirecting You to Website',
+                text: 'You have succesfully logged in!',
                 icon: 'success',
                 //showCancelButton: true,
                 confirmButtonText: 'OK',
@@ -35,7 +36,7 @@ function Sign2(){
     document.getElementById("overlay2").style.display = "none";
      Swal.fire({
                 title: 'Signed Up!',
-                text: 'Redirecting You to Website',
+                text: 'You have successfully signed in',
                 icon: 'success',
                 //showCancelButton: true,
                 confirmButtonText: 'OK',
@@ -48,5 +49,12 @@ function Sign2(){
                 }
             })
 }
-
+function turnSign(){
+    document.getElementById("trySign").style.display = "flex";
+    document.getElementById("tryLog").style.display = "none";
+}
+function turnLog(){
+    document.getElementById("tryLog").style.display = "flex";
+    document.getElementById("trySign").style.display = "none";
+}
 setTimeout(checkSign,5000);
