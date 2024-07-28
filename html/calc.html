@@ -95,17 +95,14 @@
         <div class="item-1"><button class="user_choice society" id="soc">I represent my housing society</button></div>
     </div>
 
-
-
-
-<form class="choice">
+<form class="choice" id="carbonForm">
 <table>
     <tr>
         <td><p class="indiv">Choose the area you live in</p>
             <p class="society">Choose the area of your society</p></td>
         <td colspan="3">
             <select class="area" required>
-            <option id="op1">Select</option>
+            <option id="op1" disabled selected>Select</option>
             <option id="op2">Rural</option>
             <option id="op3">Suburban</option>
             <option id="op4">Urban</option>
@@ -118,7 +115,7 @@
             <p class="society">Enter the no. of houses in the society</p>
         </td>
         <td colspan="3">
-            <input type="number" id="house_no" class="society">
+            <input type="number" id="house_no" class="society" required>
         </td>
     </tr>
 
@@ -145,7 +142,7 @@
             <p class="society">Enter the average no. of gas cylinders purchased in a year by the society</p>
         </td>
         <td colspan="3" class="gas a">
-            <input type="number" id="cyl_bill" class="gas a">
+            <input type="number" id="cyl_bill" class="gas a" required>
         </td>
     </tr>
 
@@ -155,7 +152,7 @@
             <p class="society">Enter the average amount of gas used per month (in std. cubic metre)</p>
         </td>
         <td colspan= '3' class="gas b">            
-            <input type="number" id="pipe_bill" class="gas b">
+            <input type="number" id="pipe_bill" class="gas b" required>
         </td>
     </tr>
 
@@ -205,10 +202,12 @@
 <p id="result"></p>
 <!--end of new code-->
 <div class="sub">
-    <button type="submit" id="submit_but">Calculate my carbon footprint</button>
+    <button type="submit" id="submit_but">CALCULATE MY CARBON FOOTPRINT</button>
+</div>
+<div class="sub">
+    <button type="button" onclick="location.reload();" id="submit_but">RECALCULATE</button>
 </div>
 </form>
-
     </div>
 </div>
     <footer class="page-footer" style="text-align: center;">
