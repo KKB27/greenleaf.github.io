@@ -77,22 +77,29 @@ h2 {
     display: none;
 }
 
-button {
-    font-family: Lora;
-    background-color: #B7E5D0;
+.gas_choice{
+    animation: transform 0.5s ease-in;
+    border-radius: 10px;
+}
+.gas_choice:hover{
+    transform:scale(1.05);
 }
 
-button:hover {
-    background-color: #087D72;
+button{
+    background-color: #388813;
+    border: none;  
     color: white;
 }
 
 #ind, #soc {
-    background-color: #B7E5D0;
+    font-family: Rosarivo;
+    background-color: #388813;
+    border: none;
+    box-shadow: 5px 5px 5px grey;
+    color: white;
 }
 
 #ind:hover, #soc:hover {
-    background-color: #087D72;
     color: white;
 }
 
@@ -101,13 +108,13 @@ button:hover {
     justify-content: center;
 }
 
-/*table {
+table {
     border: 1.5px solid white;
     border-collapse: separate;
     border-color: white;
     border-radius: 20px 0px 20px 0px;
     margin: auto;
-}*/
+}
 
 td {
     padding: 10px;
@@ -116,9 +123,10 @@ td {
 #submit_but {
     margin: auto;
     height: 50px;
-    margin-top: 10vh;
-    margin-bottom: 5vh;
+    margin-top: 2vh;
     transition: transform 0.5s;
+    border-radius: 10px;
+    color: white;
 }
 
 #submit_but:hover {
