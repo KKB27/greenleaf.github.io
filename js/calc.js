@@ -32,6 +32,7 @@ document.querySelectorAll(".gas_choice").forEach(button => {button.addEventListe
 
 function gas_info(e){
     gas_val= e.target.id;
+    console.log(gas_val);
     if(gas_val == 'cyl'){
         document.querySelectorAll('.a').forEach(el => el.style.display = 'block');
         document.querySelectorAll('.b').forEach(el => el.style.display = 'none');
@@ -45,9 +46,46 @@ function gas_info(e){
 //Form is about to be submitted now
 document.querySelector("#submit_but").addEventListener("click", function(ev){
     ev.preventDefault();
-    pass_values();
+    if(validate(names, gas_val)){
+        pass_values();
+    }
     
 })
+
+//new validation code
+function validate(names, gas_val){
+    var areas= document.querySelector(".area").value;
+    var houseno= document.querySelector("#house_no").value;
+    var el_bill= document.querySelector("#e_bill").value;
+    var cyli= document.querySelector("#cyl_bill").value;
+    var pipey= document.querySelector("#pipe_bill").value;
+
+    if(areas == 'Select'){
+        alert("Please fill in the required field");
+        return false;
+    }
+    else if(names== "soc" && houseno == ''){
+        alert("Please fill in the required field");
+        return false;
+    }
+    else if(el_bill == ''){
+        alert("Please fill in the required field");
+        return false;
+    }
+    else if(!gas_val){
+        alert("Please choose one of the options");
+        return false;
+    }
+    else if (gas_val == 'cyl' && cyli ==''){
+        alert("Please fill in the required field");
+        return false;
+    }
+    else if(gas_val == 'pipe' && pipey ==''){
+        alert("Please fill in the required field");
+        return false;
+    }
+    return true;
+}
 
 function pass_values(){
     //First know area in which the user lives, so we can calculate avg. CFP due to vehicles.
@@ -60,15 +98,7 @@ function pass_values(){
     else if(gas_val== "pipe"){
         pipeline= parseFloat(document.querySelector("#pipe_bill").value);
     }
-    check_if_all_present(); //to make
-}
-
-function check_if_all_present(dropdown, electricity, gas_val, cylinder, pipeline ){
-    dropdown= dropdown || "0";
-    electricity= electricity || 0;
-    gas_val= gas_val || "0";
-    if(gas_val== 'cyl'){cylinder= cylinder || 0;}
-    else if(gas_val== 'pipe'){pipeline = pipeline ||0;}
+    //check_if_all_present(); //to make
     calculate();
 }
 
@@ -89,13 +119,13 @@ function calculate(){
             cfp= ((vehicle_cfp + elec_cfp + gas_cfp) * houses) / 1000;
             trunc= cfp.toFixed(2); 
         }
-        display_result(trunc, names);
+        display_result(trunc, names, houses);
 }
 
-function display_result(trunc, names){
+function display_result(trunc, names, houses){
         res= document.querySelector("#result");
         if(names== 'ind'){res.innerHTML= "You generate "+ trunc +" metric tonnes of CO2 per year";}
-        else if(names== 'soc'){res.innerHTML= "Your society generates " + trunc + " metric tonnes of CO2 per year";}
+        else if(names== 'soc'){res.innerHTML= "Your society generates " + trunc + " metric tonnes of CO2 per year. Each house generates "+ (trunc/houses).toFixed(2) + "metric tonnes of CO2 yearly.";}
         res.style.display= "block";
         res.style.textAlign= "center";
         res.style.fontFamily= "Montserrat";
@@ -105,14 +135,14 @@ function display_result(trunc, names){
         document.querySelector(".meter").style.display= "block";
         document.querySelector(".meter").style.marginLeft= "40%";
         res.style.fontSize= "1.4rem";     
-
+    if(names=='ind')
+        {
         if(trunc>=0 && trunc<=2){
             document.querySelector("#arr-g").style.visibility= "visible";
             document.querySelector("#arr-y").style.visibility= "hidden";
             document.querySelector("#arr-o").style.visibility= "hidden";
             document.querySelector("#arr-r").style.visibility= "hidden";
             res.style.backgroundColor= "green";
-            console.log("green");
         }
         else if(trunc>2 && trunc<=4){
             document.querySelector("#arr-g").style.visibility= "hidden";
@@ -120,14 +150,12 @@ function display_result(trunc, names){
             document.querySelector("#arr-o").style.visibility= "hidden";
             document.querySelector("#arr-r").style.visibility= "hidden";
             res.style.backgroundColor= "#FFBF00";
-            console.log("yelleo");
         }
         else if(trunc>4 && trunc<=8){
             document.querySelector("#arr-g").style.visibility= "hidden";
             document.querySelector("#arr-y").style.visibility= "hidden";
             document.querySelector("#arr-o").style.visibility= "visible";
             document.querySelector("#arr-r").style.visibility= "hidden";
-            console.log("o");
             res.style.backgroundColor= "orange";
         }
         else if(trunc>8){
@@ -136,9 +164,40 @@ function display_result(trunc, names){
             document.querySelector("#arr-o").style.visibility= "hidden";
             document.querySelector("#arr-r").style.visibility= "visible";
             res.style.backgroundColor= "red";
-            console.log("red");
+        }
+    }
+
+    else if(names=='soc'){
+        if(trunc/houses >=0 && trunc/houses <=2){
+            document.querySelector("#arr-g").style.visibility= "visible";
+            document.querySelector("#arr-y").style.visibility= "hidden";
+            document.querySelector("#arr-o").style.visibility= "hidden";
+            document.querySelector("#arr-r").style.visibility= "hidden";
+            res.style.backgroundColor= "green";
+        }
+        else if(trunc/houses >2 && trunc/houses <=4){
+            document.querySelector("#arr-g").style.visibility= "hidden";
+            document.querySelector("#arr-y").style.visibility= "visible";
+            document.querySelector("#arr-o").style.visibility= "hidden";
+            document.querySelector("#arr-r").style.visibility= "hidden";
+            res.style.backgroundColor= "#FFBF00";
+        }
+        else if(trunc/houses >4 && trunc/houses <=8){
+            document.querySelector("#arr-g").style.visibility= "hidden";
+            document.querySelector("#arr-y").style.visibility= "hidden";
+            document.querySelector("#arr-o").style.visibility= "visible";
+            document.querySelector("#arr-r").style.visibility= "hidden";
+            res.style.backgroundColor= "orange";
+        }
+        else if(trunc/houses >8){
+            document.querySelector("#arr-g").style.visibility= "hidden";
+            document.querySelector("#arr-y").style.visibility= "hidden";
+            document.querySelector("#arr-o").style.visibility= "hidden";
+            document.querySelector("#arr-r").style.visibility= "visible";
+            res.style.backgroundColor= "red";
         }
         //end of new code
+    }
 }
 
 
