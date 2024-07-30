@@ -6,14 +6,14 @@ var ready = (callback) => {
 ready(() => {
     
 })
+
+var em = document.getElementById("email");
+var usnm = document.getElementById("username");
+var pass = document.getElementById("password");
+var usnm2 = document.getElementById("username2");
+var pass2 = document.getElementById("password2");
 var signed = "false";
 window.localStorage.setItem("SignIn",signed);
-function checkSign(){
-    if(window.localStorage.getItem("SignIn") == "false"){
-        document.getElementById("overlay2").style.display = "flex";
-    }
-}
-
 function Sign(){
     document.getElementById("overlay2").style.display = "none";
     Swal.fire({
@@ -57,4 +57,25 @@ function turnLog(){
     document.getElementById("tryLog").style.display = "flex";
     document.getElementById("trySign").style.display = "none";
 }
-setTimeout(checkSign,5000);
+function newfunc(){
+    var val = window.localStorage.getItem("SignIn")
+    if(val == "false"){
+        document.getElementById("overlay2").style.display = "flex";
+        document.getElementById("sgn").innerHTML = "Sign Out";
+    }
+    else{
+        document.getElementById("sgn").innerHTML = "Sign In";
+        window.localStorage.setItem("SignIn","true");
+        Swal.fire({
+            title: 'Signed Out',
+            text: 'You have successfully logged out',
+            icon: 'success',
+            //showCancelButton: true,
+            confirmButtonText: 'OK',
+            //cancelButtonText: 'No, cancel!',
+            confirmButtonColor: '#023402',
+            //cancelButtonColor: '#d33'
+        })
+    }
+    
+}

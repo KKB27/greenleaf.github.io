@@ -11,6 +11,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/grid.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/sweetalert2.min.css">
      <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
@@ -20,9 +22,61 @@
 
 </head>
 <style>
-   
+   a{
+       text-decoration: none;
+   }
 </style>
 <body>
+    <div id="overlay2">
+        <div class="grandFlex">
+            <img src="../images/logoMain2.jpg" width="10%" style="border-radius: 50%;"><h1>Green Leaf Solutions</h1>
+            
+                <div class="gridCont" id="trySign">
+                    <form>
+                        <label for="email" style="display: block; margin-bottom: 10px;">
+                            Email:
+                            <input type="email" id="email" name="email" required style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
+                        </label>
+                        <label for="username" style="display: block; margin-bottom: 10px;">
+                            Username:
+                            <input type="text" id="username" name="username" required style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
+                        </label>
+                        <label for="password" style="display: block; margin-bottom: 20px;">
+                            Password:
+                            <input type="password" id="password" name="password" required style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
+                        </label>
+                        <button type="button" id="signup" onclick=Sign2()>
+                            Sign Up
+                        </button>
+                        <h2>OR</h2>
+                        <button type="button" id="signup2" onclick=turnLog()>
+                            Log In
+                        </button>
+                       
+                    </form>
+                </div>
+                <div class="gridCont" id="tryLog" style="display: none;">
+                    <form>
+                        <label for="username2" style="display: block; margin-bottom: 10px;">
+                            Username:
+                            <input type="text" id="username2" name="username" required style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
+                        </label>
+                        <label for="password2" style="display: block; margin-bottom: 20px;">
+                            Password:
+                            <input type="password" id="password2" name="password" required style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
+                        </label>
+                        <button type="button" id="login" onclick=Sign()>
+                            Log In
+                        </button>
+                        <h2>OR</h2>
+                        <button type="button" id="login2" onclick=turnSign()>
+                            Sign Up
+                        </button>
+                    </form>
+                </div>
+        </div>
+        
+    </div>
     <nav class="navbar navbar-expand-md" style="position: sticky;top:0;">
         <a class="navbar-brand" href="../index.html"> &nbsp;<img src="../images/logoMain2.jpg" height="50px"> &nbsp; Green Leaf Solutions</a>
         <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#main-navigation">
@@ -45,23 +99,31 @@
                 <li class="nav-item">
                     <a class="nav-link" href="calc.html">Carbon Footprint Calculator</a>
                 </li>
+                <li class="nav-item">
+                    <button class="nav-link" style="background-color: #004800; color: white !important; border-radius: 20px 20px;" onclick=newfunc() id="sgn">Sign In</button> 
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" style="background-color: transparent; border: none;"><img src="../images/cart.png" alt="cart" height="40px"></button> 
+                </li>
             </ul>
         </div>
     </nav>
     <div class="grandFlex">
             <div class="gridPro" style="width: 25%;margin: auto;aspect-ratio: 4/3;margin-top: 2%;margin-bottom: 2%;">
-                 <a href="consultancy_services.html">
+                 
                 <h1 style="background-color: #FFD700;">FREE!!</h1>
                 <p>For the individuals looking to better their impact on the environment</p><br>
                 <p>Includes:</p>
                     <p>Video Conferencing with Energy Auditors</p><br><br>
+                <a href="consultancy_services.html">
                 <button class="soc">
                     Get Started!
                 </button>
+                </a>    
             </div>
         
             <div class="gridPro" style="width: 25%;margin: auto;aspect-ratio: 4/3;margin-top: 2%;margin-bottom: 2%;">
-                 <a href="consultancy_services.html">
+                 
                 <h1 style="background-color: #FFD700;">&#8377 1,000/-</h1>
                 <p>For the housing socities of modern India</p>
                 <p>Includes:</p>
@@ -69,21 +131,25 @@
                     <br>
                     <p>Consultation with accredited Energy Manager</p>
                     <br>
+                <a href="consultancy_services.html">
                 <button class="soc">
                     Get Started!
                 </button>
+                </a>
             </div>
             <div class="gridPro" style="width: 25%;margin: auto;aspect-ratio: 4/3;margin-top: 2%;margin-bottom: 2%;">
                 <h1 style="background-color: #FFD700;">&#8377 10,000/-</h1>
-                 <a href="consultancy_services.html">
+                
                 <p>For the budding corporate houses</p>
                 <p>Includes:</p>
                     <p>On Field Examination</p>
                     <p>Consultation with accredited Energy Managers and Auditors</p>
                     <p>All paperwork</p>
+                 <a href="consultancy_services.html">
                 <button class="soc">
                     Get Started!
                 </button>
+                 </a>
             </div>
     </div>
     <footer class="page-footer" style="text-align: center;">
@@ -105,5 +171,7 @@
         <div class="footer-copyright text-center"><sup>*</sup>From Indian Banks only</div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/sweetalert2.min.js"></script>
 </body>
 </html>
