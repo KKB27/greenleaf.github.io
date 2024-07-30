@@ -99,6 +99,7 @@ nav.navbar{
     z-index: 1001;
     padding: 20px;
     flex-direction: column;
+    z-index:1000;
 }
 
 fieldset {
