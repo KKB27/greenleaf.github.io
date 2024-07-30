@@ -138,30 +138,37 @@
     font-size: 24px;
   }
   #b1{
-  width: 220px;
-  height: 80px;
-  border-radius: 20px;
+    height:2.3em;
+    width:7em;
+  border-radius: 100px;
+  border:none;
   font-size:30px;
   font-family: "Ink Free", Times, serif;
-  color:#144623;
-  background-color: #37ff73;
+  color:#fff;
+    background:#12722a;
   margin-left: 30px;
   }
   #b1 a{
   text-decoration: none;
   font-size:1.2rem;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  color:#144623;
-  background-color: #37ff73;
+  color:#fff;
+    background:#12722a;
+    border: none;
+    border-radius: 100px;
+
   font-weight: bolder;
   }
   #b1:hover{
     cursor:pointer;
+      transform:scale(1.1);
+    
   }
   
-  #qty{
-    width:39px;
+  #qtygwr{
+    width:49px;
     height: 40px;
+    border-radius: 5px;
   
   }
   .vtext{
@@ -204,4 +211,56 @@
     0% {transform: translateY(0); opacity:0;}
     100% {transform: translateY(-40px);opacity:1;}
   }
+
+  
+  .addtocart{
+    display:block;
+    padding:0.5em 1em 0.5em 1em;
+    border-radius:100px;
+    border:none;
+    font-size:2em;
+    position:relative;
+  margin-top:-70px;
+  margin-left:320px;
+    cursor:pointer;
+    height:2em;
+    width:7em;
+    overflow:hidden;
+    transition:transform 0.1s;
+    z-index:1;
+  }
+  .addtocart:hover{
+    transform:scale(1.1);
+  }
+  .pretext{
+    color:#fff;
+    background:#12722a;
+    position:absolute;
+    top:0;
+    font-size:20px;
+    left:0;
+    height:100%;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family: 'Quicksand', sans-serif;
+  }
+  i{
+    margin-right:10px;
+  }
+  .done{
+    background:#35b928;
+    position:absolute;
+    width:100%;
+    top:0;
+    left:0;
+    transition:transform 0.3s ease;
+  
+    transform:translate(-110%) skew(-40deg);
+  }
+  .posttext{
+    background:#35b928;
+  }
+
   

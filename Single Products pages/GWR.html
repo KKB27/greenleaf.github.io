@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon_io/favicon-16x16.png">
@@ -64,15 +64,23 @@
             <img src="../Single Products pages/images/LeafLeft.png" alt="Left Leaf" class="leafl" class="leaf">
             <img src="../Single Products pages/images/leafRight.png" alt="Right Leaf" class="leafr" class="leaf">
         </section> 
- 
     
     <div class="images">
         <img src="../images/grey_water-2.jpg" class="images" alt=" Small solar panel" id="small1"  class="grid-item item1"> 
         <img src="../images/GWR.jpg" alt="Components" class="images" id="comp"  class="grid-item item2"> 
     <div class="text"class="images">
         <h1>₹10,000</h1>
-        <input id="qty" type="number" placeholder="Qty">
+        <input id="qtygwr" type="number" placeholder="Qty">
         <button id="b1"><a href="#"> Buy Now</button></a>
+<button class="addtocart">
+  <div class="pretext">
+    <i class="fas fa-cart-plus"></i> ADD TO CART
+  </div>
+  
+  <div class="pretext done">
+    <div class="posttext"><i class="fas fa-check"></i> ADDED</div>
+  </div>
+</button>
     </div>
     </div>
           </div>
@@ -85,8 +93,8 @@
             <li class="slide-up">Weather Resistance</li>
             <li class="slide-up">Customizable Dimensions</li>
             <li class="slide-up">Seamless Integration</li>
-            <li class="slide-up"> Quick Payback Period</li>
-              <li class="slide-up">High Energy Storage Compatibility</li>
+            <li class="slide-up">Dense cleaning filter</li>
+              <li class="slide-up">Leakproof System</li>
           
         </ol>
     </div>
@@ -163,7 +171,22 @@
         });
         observer.observe(vid);
 
-        
+        const button = document.querySelector(".addtocart");
+const done = document.querySelector(".done");
+console.log(button);
+let added = false;
+button.addEventListener('click',()=>{
+  if(added){
+    done.style.transform = "translate(-110%) skew(-40deg)";
+    added = false;
+  }
+  else{
+    done.style.transform = "translate(0px)";
+    added = true;
+  }
+    
+});
+
     </script>
 </body>
 </html>
