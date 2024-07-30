@@ -59,7 +59,7 @@
     
     <div class="container"></div>
     <div class="content">
-        <img src="../Single Products pages/images/solarpanel.png" alt="greenroof" id="enlarge" class="enlarged"> 
+        <img src="../Single Products pages/images/grey_water-2.jpg" alt="greywater" id="enlarge" class="enlarged"> 
         <section class="home">
             <img src="../Single Products pages/images/LeafLeft.png" alt="Left Leaf" class="leafl" class="leaf">
             <img src="../Single Products pages/images/leafRight.png" alt="Right Leaf" class="leafr" class="leaf">
@@ -67,8 +67,8 @@
  
     
     <div class="images">
-        <img src="../Single Products pages/images/solarpanel.png" class="images" alt=" Small solar panel" id="small1"  class="grid-item item1"> 
-        <img src="../Single Products pages/images/solar2.png" alt="Components" class="images" id="comp"  class="grid-item item2"> 
+        <img src="../Single Products pages/images/grey_water-2.jpg" class="images" alt=" Small solar panel" id="small1"  class="grid-item item1"> 
+        <img src="../Single Products pages/images/GWR.jpg" alt="Components" class="images" id="comp"  class="grid-item item2"> 
     <div class="text"class="images">
         <h1>₹10,000</h1>
         <input id="qty" type="number" placeholder="Qty">
@@ -80,7 +80,7 @@
    <h2 style="font-size:62px; font-family:cursive;">Features</h2>
         <img src="images/separation.png" id="line">
         <div class="vtext">
-        <video class="video" id="vid"><source src="../Single Products pages/anim/SolarPanel.mp4" type="video/mp4"></video>
+        <video class="video" id="vid"><source src="../Single Products pages/anim/GreywaterRecycling.mp4" type="video/mp4"></video>
         <ol class="custom-list">
             <li class="slide-up">Weather Resistance</li>
             <li class="slide-up">Customizable Dimensions</li>
@@ -129,12 +129,12 @@
         var enlarged = document.getElementById("enlarge");
 
         compo.addEventListener("click", function() {
-            enlarged.src = "../Single Products pages/images/solar2.png" ;
+            enlarged.src = "../Single Products pages/images/GWR.jpg" ;
             enlarged.classList.add("enlarged-image");
         });
 
         small.addEventListener("click", function() {
-            enlarged.src = "../Single Products pages/images/solarpanel.png";
+            enlarged.src = "../Single Products pages/images/grey_water-2.jpg";
         });
 
         const leafl = document.querySelector('.leafl');
