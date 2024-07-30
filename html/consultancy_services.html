@@ -10,17 +10,40 @@
     <link rel="manifest" href="../images/favicon_io/site.webmanifest">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/common.css">
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: url("../images/greenmosiac.jpg");
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+        }
 
+        .form-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+      /*  .black {
+            width: 400px;
+            height: 120px;
+            background-color:white;
+            position: absolute;
+            top: 245.5%;
+            left: 70%;
+            transform: translate(-50%, -50%);
+            z-index: 100;
+        }*/
+    </style>
 </head>
-<style>
-   
-</style>
 <body>
     <nav class="navbar navbar-expand-md" style="position: sticky;top:0;">
         <a class="navbar-brand" href="../index.html"> &nbsp;<img src="../images/logoMain2.jpg" height="50px"> &nbsp; Green Leaf Solutions</a>
@@ -48,13 +71,11 @@
         </div>
     </nav>
     <br><br>
-    <br><br>
-    <br><br>
-    <div id="ff-compose"></div>
-    <script async defer src="https://formfacade.com/include/117299567735307323079/form/1FAIpQLSf_-G29vliqzA40iucTPdUJchOQqfp_Ff8e73agMuVWYf_g6g/classic.js?div=ff-compose"></script>
-
-    <br><br>
-    <br><br>
+    <div class="form-container">
+        <div id="ff-compose"></div>
+<script async defer src="https://formfacade.com/include/117299567735307323079/form/1FAIpQLSf_-G29vliqzA40iucTPdUJchOQqfp_Ff8e73agMuVWYf_g6g/classic.js?div=ff-compose"></script>
+    </div>
+    <div class="black"></div>
     <br><br>
     <footer class="page-footer" style="text-align: center;">
         <div class="container">
@@ -67,12 +88,12 @@
                     </h1>
                 </div>
             </div>
-            <div class="footer-copyright text-center" >Email us at : <a href="mailto:greenleafsolutions@gmail.com" style="text-decoration: none; color: white;">greenleafsolutions@gmail.com</a></div>
-            <div class="footer-copyright text-center">We Accept: &nbsp; UPI &nbsp; Credit Card &nbsp; Debit Card &nbsp; Net Banking <sup>*</sup></div>
-           
-        <div class="footer-copyright text-center">Privacy Policy</div>
-        <div class="footer-copyright text-center">© All rights reserved: greenleafsolutions Pvt Ltd</div>
-        <div class="footer-copyright text-center"><sup>*</sup>From Indian Banks only</div>
+            <div class="footer text-center">Email us at : <a href="mailto:greenleafsolutions@gmail.com" style="text-decoration: none; color: white;">greenleafsolutions@gmail.com</a></div>
+            <div class="footer text-center">We Accept: &nbsp; UPI &nbsp; Credit Card &nbsp; Debit Card &nbsp; Net Banking <sup>*</sup></div>
+            <div class="footer text-center">Privacy Policy</div>
+            <div class="footer text-center">© All rights reserved: greenleafsolutions Pvt Ltd</div>
+            <div class="footer text-center"><sup>*</sup>From Indian Banks only</div>
+        </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
