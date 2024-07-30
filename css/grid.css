@@ -11,7 +11,7 @@ body{
     aspect-ratio: 4/3;
 }
 
-.grandFlex{
+.grandFlex2{
     display: flex;
     border-color: black;
     justify-content: center;
@@ -22,12 +22,12 @@ body{
     flex-wrap: wrap;
 }
 
-.grandFlex a{
+.grandFlex2 a{
     text-decoration: none;
     width: 100%;
 }
 
-.gridCont{
+.gridCont2{
     display: flex;
     background-color: transparent;
     border-radius: 10px;
@@ -41,7 +41,7 @@ body{
     padding: 5px;
 }
 
-.gridPro{
+.gridPro2{
     background-color: #155e15;
     border-radius: 3px solid tranparent;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
@@ -55,7 +55,7 @@ body{
     aspect-ratio: 4/3;
 }
 
-.gridPro img{
+.gridPro2 img{
     width: 80%;
     aspect-ratio: 4/3;
 }
