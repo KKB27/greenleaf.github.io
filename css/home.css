@@ -66,8 +66,7 @@
 
 .flexIn:hover a{
     color: white;
-    transform: scale(1.2);
-}
+    }
 
 .flexIn img{
     border: 0.0 transparent; 
@@ -79,8 +78,8 @@
 }
 
 #f1:hover{
-    border: 0.25rem solid; 
-    border-color: #9ACD32;
+     
+    
     background-color: #2E8B57  !important; 
     color: white;
 }
@@ -90,22 +89,19 @@
 }
 
 #f2:hover{
-    border: 0.25rem solid; 
-    border-color: #9ACD32;
+
     background-color: #2E8B57  !important; 
     color: white;
 }
 
 #f3:hover{
-    border: 0.25rem solid; 
-    border-color: #9ACD32;
+    
     background-color: #2E8B57  !important; 
     color: white;
 }
 
 #f4:hover{
-    border: 0.25rem solid; 
-    border-color: #9ACD32;
+    
     background-color: #2E8B57  !important; 
     color: white;
 }
@@ -113,7 +109,7 @@
 .flexIn:hover{
     background-color: #fff !important;
     cursor: pointer;
-    transform: scale(1.2);
+
 }
 .flexIm{
     width: 20%;
