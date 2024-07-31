@@ -175,7 +175,7 @@ margin-left: 30px;
     line-height: 2.3;
   }
   .slide-up::before {
-    content: url("../Single Products pages/images/sun.png");
+    content: url("../Single Products pages/images/dustbin.png");
     display: inline-block;
     height: 23px;
     width: 20px;
