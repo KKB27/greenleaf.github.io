@@ -69,7 +69,7 @@ nav.navbar{
     color: rgb(241, 105, 209);
 }
 .page-footer img{
-    border-color: transparent !important;
+    border-color: white !important;
     width: 5% !important;
     border-radius: 50%;
 }
