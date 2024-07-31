@@ -8,15 +8,24 @@
     margin: 10px;    
     border-radius: 10px;
     font-family: Lora;
-    line-height: 35px;;
+    line-height: 35px;
 }
 h1{
-    color: white;
+    color: forestgreen;
     font-size: 3rem;
     text-align: center;
     font-family: Rosarivo;
 }
-.flexbox{
+h2{
+    color: rgb(6, 36, 28);
+    text-align: center;
+    font-family: Rosarivo;
+}
+.flexbox1{
+    display:flex;
+    justify-content: center;
+}
+.flexbox2{
     display:flex;
     margin: 2.5%;
 }
@@ -26,11 +35,10 @@ h1{
     margin:2%;
     border-radius: 10px;
     background-color: #A8E4A0;
+    box-shadow: 3px 3px 10px 3px grey;
     
 }
-.item:hover{
-    box-shadow: 3px 3px 5px 3px;
-}
+
 .name{
     text-align: center;
     font-family: Montserrat;
@@ -40,12 +48,14 @@ h1{
 }
 #linke img{
     height: 25px;
+    width:25px;
     padding-left:10px;
     padding-right: 10px;
     cursor: pointer;
 }
 #insta img{
     height: 25px;
+    width: 25px;
     padding-left: 10px;
     padding-right: 10px;
     cursor: pointer;
@@ -53,3 +63,4 @@ h1{
 p{
     text-align: center;
 }
+
