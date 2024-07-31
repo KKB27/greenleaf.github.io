@@ -106,7 +106,7 @@
                     <button class="nav-link" style="background-color: #004800; color: white !important; border-radius: 20px 20px;" onclick=newfunc() id="sgn">Sign In</button> 
                 </li>
                 <li class="nav-item">
-                    <button class="nav-link" style="background-color: transparent; border: none;"><img src="../images/cart.png" alt="cart" height="40px"></button> 
+                    <button class="nav-link" style="background-color: transparent; border: none;"><img src="../images/cart.png" alt="cart" height="40px" onclick=cart()></button> 
                 </li>
             </ul>
         </div>
@@ -128,10 +128,26 @@
         <img src="../Single Products pages/images/solarpanel.png" class="images" alt=" Small solar panel" id="small1"  class="grid-item item1"> 
         <img src="../Single Products pages/images/solar2.png" alt="Components" class="images" id="comp"  class="grid-item item2"> 
     <div class="text"class="images">
-        <h1>₹10,000</h1>
+        <h1 id="price">₹10,000</h1>
         <input id="qtysp" type="number" placeholder="Qty">
         <button id="b1"><a href="#"> Buy Now</button></a>
-        <button class="addtocart">
+        <script>
+            var price = document.getElementById("price").innerHTML;
+            price = price.slice(1,7);
+            function buy(){
+                var quan = document.getElementById("qtysp").value;
+                var GF = {"name":"Solar","price":price,"quantity":quan.toString()};
+                var itemDetails = JSON.stringify(GF);
+                window.localStorage.setItem("Solar",itemDetails);
+            }
+            function cart(){
+                var ans = window.localStorage.getItem("SignIn");
+                if(ans == "true"){
+                    document.location.href = "../html/cart.html";
+                }
+            }
+        </script>
+        <button class="addtocart" onclick=buy()>
             <div class="pretext">
               <i class="fas fa-cart-plus"></i> ADD TO CART
             </div>

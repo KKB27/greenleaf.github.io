@@ -107,8 +107,16 @@
                     <button class="nav-link" style="background-color: #004800; color: white !important; border-radius: 20px 20px;" onclick=newfunc() id="sgn">Sign In</button> 
                 </li>
                 <li class="nav-item">
-                    <button class="nav-link" style="background-color: transparent; border: none;"><img src="../images/cart.png" alt="cart" height="40px"></button> 
+                    <button class="nav-link" style="background-color: transparent; border: none;" onclick=cart()><img src="../images/cart.png" alt="cart" height="40px" onclick=cart()></button> 
                 </li>
+                <script>
+                    function cart(){
+                        var ans = window.localStorage.getItem("SignIn");
+                        if(ans == "true"){
+                            document.location.href = "../html/cart.html";
+                        }
+                    }
+                </script>
             </ul>
         </div>
     </nav>
@@ -127,10 +135,27 @@
         <img src="../Single Products pages/images/greenroof1.jpeg" class="images" alt="Filter Small" id="small1" class="grid-item item1"> 
         <img src="../Single Products pages/images/Greenroof.png" class="images" alt="Components" id="comp" class="grid-item item2"> 
     <div class="text" class="images">
-        <h1>₹10,000</h1>
+        <h1 id="price">₹10,000</h1>
         <input id="qtygf" type="number" placeholder="Qty">
         <button id="b1"><a href="#"> Buy Now</button></a>
-        <button class="addtocart">
+        <script>
+            var price = document.getElementById("price").innerHTML;
+            price = price.slice(1,7);
+            
+            function buy(){
+                var quan = document.getElementById("qtygf").value;
+                var GF = {"name":"Green Roof Setup","price":price,"quantity":quan};
+                var itemDetails = JSON.stringify(GF);
+                window.localStorage.setItem("GreenRoof",itemDetails);
+            }
+            function cart(){
+                var ans = window.localStorage.getItem("SignIn");
+                if(ans == "true"){
+                    document.location.href = "../html/cart.html";
+                }
+            }
+        </script>
+        <button class="addtocart" onclick=buy()>
             <div class="pretext">
               <i class="fas fa-cart-plus"></i> ADD TO CART
             </div>

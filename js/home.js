@@ -6,7 +6,8 @@ var ready = (callback) => {
 ready(() => {
     
 })
-
+localStorage.clear();
+window.localStorage.setItem("SignIn","false");
 var em = document.getElementById("email");
 var usnm = document.getElementById("username");
 var pass = document.getElementById("password");
