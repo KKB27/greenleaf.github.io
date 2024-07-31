@@ -13,7 +13,13 @@ var pass = document.getElementById("password");
 var usnm2 = document.getElementById("username2");
 var pass2 = document.getElementById("password2");
 var signed = "false";
-window.localStorage.setItem("SignIn",signed);
+var signStat = window.localStorage.getItem("SignIn");
+if(signStat == "true"){
+    document.getElementById("sgn").innerHTML = "Sign Out";
+}
+else{
+    document.getElementById("sgn").innerHTML = "Sign In";
+}
 function Sign(){
     document.getElementById("overlay2").style.display = "none";
     Swal.fire({
@@ -58,14 +64,15 @@ function turnLog(){
     document.getElementById("trySign").style.display = "none";
 }
 function newfunc(){
-    var val = window.localStorage.getItem("SignIn")
-    if(val == "false"){
+    //var val = window.localStorage.getItem("SignIn")
+    if(document.getElementById("sgn").innerHTML == "Sign In"){
         document.getElementById("overlay2").style.display = "flex";
         document.getElementById("sgn").innerHTML = "Sign Out";
     }
     else{
         document.getElementById("sgn").innerHTML = "Sign In";
-        window.localStorage.setItem("SignIn","true");
+        document.getElementById("overlay2").style.display = "none";
+        window.localStorage.setItem("SignIn","false");
         Swal.fire({
             title: 'Signed Out',
             text: 'You have successfully logged out',
@@ -77,5 +84,4 @@ function newfunc(){
             //cancelButtonColor: '#d33'
         })
     }
-    
 }

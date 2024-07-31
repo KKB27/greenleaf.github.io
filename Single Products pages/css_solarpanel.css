@@ -21,7 +21,7 @@
     transform: translateX(-50%);
     font-family: "Cosi times";
     padding: 1em;
-    z-index: 1000;
+    z-index: 900 !important;
     background-color: #fff;
     border-radius: 0 0 50px 50px;
 }
