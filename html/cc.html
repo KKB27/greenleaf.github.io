@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rosarivo:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Rosarivo:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        h1{
+            text-align: center;
+            font-family: Rosarivo;
+        }
+        .form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: auto;
+            border-radius: 10px 0px;
+            border: none;
+            width:300px;
+            background-color: rgb(102, 147, 10);
+            color: white;
+            font-family: Lora;
+        }
+        legend{
+            font-family: Lora;
+            font-size: larger;
+        }
+        #divi{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        #sub{
+            height: 30px;
+            background-color: #198754;
+            color:white;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        #sub:hover{
+            transform: scale(1.08);
+        }
+    </style>
+</head>
+<body>
+    <h1>ENTER YOUR CREDIT CARD DETAILS</h1>
+        <form class="form">
+            <fieldset>
+            <legend>CARD DETAILS</legend>
+            <div> <input type="text" class="in" placeholder="Enter your card no. here" required></div><br>
+            <div> <input type="text" class="in" placeholder="Name on the card" required> </div>
+            </fieldset>
+            <br>
+            <fieldset><legend>CVV</legend><input type="text" class="in" required></div></fieldset><BR>
+            <fieldset><legend>EXPIRY DETAILS</legend><input type="month" class="in" required></div></fieldset><br>
+            <fieldset><legend>ENTER AMOUNT TO BE PAID</legend><input type="text" class="in" required></div></fieldset><BR>
+            <fieldset><legend>BILLING ADDRESS</legend><input type="text" class="in" placeholder="Enter your address here" required></div></fieldset><BR>
+            <div id="divi"><input type="submit" id="sub"></div>
+        </form>
+</body>
+</html>
