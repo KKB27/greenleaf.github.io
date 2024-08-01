@@ -157,11 +157,10 @@ margin-left: 30px;
   transform:scale(1.1);
 }
 
-#qtysp{
+#qtygar{
   width:49px;
   height: 40px;
   border-radius: 5px;
-
 }
 .vtext{
     display: grid;

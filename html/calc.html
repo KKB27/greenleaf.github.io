@@ -75,7 +75,7 @@
         
     </div>
 <nav class="navbar navbar-expand-md" style="position: sticky;top:0;">
-        <a class="navbar-brand" href="index.html"> &nbsp;<img src="../images/logoMain2.jpg" height="50px"> &nbsp; Green Leaf Solutions</a>
+        <a class="navbar-brand" href="../index2.html"> &nbsp;<img src="../images/logoMain2.jpg" height="50px"> &nbsp; Green Leaf Solutions</a>
         <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#main-navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -100,8 +100,28 @@
                     <button class="nav-link" style="background-color: #004800; color: white !important; border-radius: 20px 20px;" onclick=newfunc() id="sgn">Sign In</button> 
                 </li>
                 <li class="nav-item">
-                    <button class="nav-link" style="background-color: transparent; border: none;"><img src="../images/cart.png" alt="cart" height="40px"></button> 
+                    <button class="nav-link" style="background-color: transparent; border: none;"><img src="../images/cart.png" alt="cart" height="40px" onclick=cart()></button> 
                 </li>
+                <script>
+                    function cart(){
+                        var ans = window.localStorage.getItem("SignIn");
+                        if(ans == "true"){
+                            document.location.href = "../html/cart.html";
+                        }
+                        else{
+                            Swal.fire({
+                                title: 'Not signed in',
+                                text: 'You can\'t have a cart without signing in',
+                                icon: 'error',
+                                //showCancelButton: true,
+                                confirmButtonText: 'OK',
+                                //cancelButtonText: 'No, cancel!',
+                                confirmButtonColor: '#023402',
+                                //cancelButtonColor: '#d33'
+                            })
+                        }
+                    }
+                </script>
             </ul>
         </div>
     </nav>

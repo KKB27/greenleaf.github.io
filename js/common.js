@@ -55,6 +55,7 @@ function newfunc(){
         document.getElementById("sgn").innerHTML = "Sign Out";
     }
     else{
+        localStorage.clear();
         document.getElementById("sgn").innerHTML = "Sign In";
         document.getElementById("overlay2").style.display = "none";
         window.localStorage.setItem("SignIn","false");
@@ -67,6 +68,9 @@ function newfunc(){
             //cancelButtonText: 'No, cancel!',
             confirmButtonColor: '#023402',
             //cancelButtonColor: '#d33'
+        }).then((result)=>{
+            location.reload();
         })
+        
     }
 }

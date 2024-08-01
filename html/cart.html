@@ -11,6 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/grid.css">
+    <link rel="stylesheet" href="../css/sweetalert2.min.css">
      <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
@@ -35,7 +36,7 @@
  <body>
      
      <nav class="navbar navbar-expand-md" style="position: sticky;top:0;">
-         <a class="navbar-brand" href="../index.html"> &nbsp;<img src="../images/logoMain2.jpg" height="50px"> &nbsp; Green Leaf Solutions</a>
+         <a class="navbar-brand" href="../index2.html"> &nbsp;<img src="../images/logoMain2.jpg" height="50px"> &nbsp; Green Leaf Solutions</a>
          <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#main-navigation">
              <span class="navbar-toggler-icon"></span>
          </button>
@@ -123,7 +124,85 @@
          <div class="footer-copyright text-center">© All rights reserved: greenleafsolutions Pvt Ltd</div>
          <div class="footer-copyright text-center"><sup>*</sup>From Indian Banks only</div>
      </footer>
-     <script src="../js/common.js"></script>
+     <script>
+        var signStat = window.localStorage.getItem("SignIn");
+if(signStat == "true"){
+    document.getElementById("sgn").innerHTML = "Sign Out";
+}
+else{
+    document.getElementById("sgn").innerHTML = "Sign In";
+}
+function Sign(){
+    document.getElementById("overlay2").style.display = "none";
+    Swal.fire({
+                title: 'Logged In!',
+                text: 'You have succesfully logged in!',
+                icon: 'success',
+                //showCancelButton: true,
+                confirmButtonText: 'OK',
+                //cancelButtonText: 'No, cancel!',
+                confirmButtonColor: '#023402',
+                //cancelButtonColor: '#d33'
+            }).then((result) => {
+                if(result.isConfirmed){
+                    window.localStorage.setItem("SignIn","true");
+                }
+            })
+}
+
+function Sign2(){
+    document.getElementById("overlay2").style.display = "none";
+     Swal.fire({
+                title: 'Signed Up!',
+                text: 'You have successfully signed in',
+                icon: 'success',
+                //showCancelButton: true,
+                confirmButtonText: 'OK',
+                //cancelButtonText: 'No, cancel!',
+                confirmButtonColor: '#023402',
+                //cancelButtonColor: '#d33'
+            }).then((result) => {
+                if(result.isConfirmed){
+                    window.localStorage.setItem("SignIn","true");
+                }
+            })
+}
+function turnSign(){
+    document.getElementById("trySign").style.display = "flex";
+    document.getElementById("tryLog").style.display = "none";
+}
+function turnLog(){
+    document.getElementById("tryLog").style.display = "flex";
+    document.getElementById("trySign").style.display = "none";
+}
+function newfunc(){
+    //var val = window.localStorage.getItem("SignIn")
+    if(document.getElementById("sgn").innerHTML == "Sign In"){
+        document.getElementById("overlay2").style.display = "flex";
+        document.getElementById("sgn").innerHTML = "Sign Out";
+    }
+    else{
+        localStorage.clear();
+        document.getElementById("sgn").innerHTML = "Sign In";
+        window.localStorage.setItem("SignIn","false");
+        Swal.fire({
+            title: 'Signed Out',
+            text: 'You have successfully logged out',
+            icon: 'success',
+            //showCancelButton: true,
+            confirmButtonText: 'OK',
+            //cancelButtonText: 'No, cancel!',
+            confirmButtonColor: '#023402',
+            //cancelButtonColor: '#d33'
+            }
+        ).then((result) => {
+            location.reload();
+        });
+        //location.reload();
+    }
+}
+
+     </script>
      <script src="../js/sweetalert2.min.js"></script>
      <script src="../js/cart.js"></script>
  </body>

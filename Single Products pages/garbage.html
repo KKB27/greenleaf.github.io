@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
    <title>Products-Garbage</title>
-    <link rel="stylesheet" href="../Single Products pages/GWR.css">
+    <link rel="stylesheet" href="../Single Products pages/garbage.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
     <meta charset="UTF-8">
@@ -84,7 +84,7 @@
         
     </div>
     <nav class="navbar navbar-expand-md" style="position: sticky;top:0;">
-        <a class="navbar-brand" href="../index.html"> &nbsp;<img src="../images/logoMain2.jpg" height="50px"> &nbsp; Green Leaf Solutions</a>
+        <a class="navbar-brand" href="../index2.html"> &nbsp;<img src="../images/logoMain2.jpg" height="50px"> &nbsp; Green Leaf Solutions</a>
         <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#main-navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -147,6 +147,18 @@
                 var ans = window.localStorage.getItem("SignIn");
                 if(ans == "true"){
                     document.location.href = "../html/cart.html";
+                }
+                else{
+                    Swal.fire({
+                        title: 'Not signed in',
+                        text: 'You can\'t have a cart without signing in',
+                        icon: 'error',
+                        //showCancelButton: true,
+                        confirmButtonText: 'OK',
+                        //cancelButtonText: 'No, cancel!',
+                        confirmButtonColor: '#023402',
+                        //cancelButtonColor: '#d33'
+                    })
                 }
             }
         </script>

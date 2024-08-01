@@ -6,8 +6,10 @@ var ready = (callback) => {
 ready(() => {
     
 })
-localStorage.clear();
-window.localStorage.setItem("SignIn","false");
+if(!window.localStorage.getItem("SignIn")){
+    window.localStorage.setItem("SignIn","false");
+}
+//window.localStorage.setItem("SignIn","false");
 var em = document.getElementById("email");
 var usnm = document.getElementById("username");
 var pass = document.getElementById("password");
@@ -71,6 +73,7 @@ function newfunc(){
         document.getElementById("sgn").innerHTML = "Sign Out";
     }
     else{
+        localStorage.clear();
         document.getElementById("sgn").innerHTML = "Sign In";
         document.getElementById("overlay2").style.display = "none";
         window.localStorage.setItem("SignIn","false");
@@ -83,6 +86,8 @@ function newfunc(){
             //cancelButtonText: 'No, cancel!',
             confirmButtonColor: '#023402',
             //cancelButtonColor: '#d33'
+        }).then((result)=>{
+            location.reload();
         })
     }
 }
