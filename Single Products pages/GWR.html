@@ -136,6 +136,9 @@
             
             function buy(){
                 var quan = document.getElementById("qtygwr").value;
+                if(!quan){
+                    quan = 1;
+                }
                 var GF = {"name":"Grey Water Recycling System","price":price,"quantity":quan,"intP":8000};
                 var itemDetails = JSON.stringify(GF);
                 window.localStorage.setItem("GWR",itemDetails);

@@ -136,6 +136,9 @@
             
             function buy(){
                 var quan = document.getElementById("qtyrwh").value;
+                if(!quan){
+                    quan = 1;
+                }
                 var GF = {"name":"Rain Water Harvesting","price":price,"quantity":quan,"intP":10000};
                 var itemDetails = JSON.stringify(GF);
                 window.localStorage.setItem("RWH",itemDetails);

@@ -128,10 +128,13 @@
             function pay(){
                 location.href = "Buy_now.html";
             }
-            if(window.localStorage.getItem("amt")){
-                var amount = window.localStorage.getItem("amt");
-                document.getElementById("amt1").innerHTML = "&#8377;"+ amount;
+            
+            var amount = window.localStorage.getItem("amt");
+            if(amount){
+                document.getElementById("paynow").innerHTML = document.getElementById("paynow").innerHTML + "&#8377;"+ amount;
             }
+            
+            
             
          </script>
      <br>

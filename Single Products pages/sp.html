@@ -136,6 +136,9 @@
             price = price.slice(1,7);
             function buy(){
                 var quan = document.getElementById("qtysp").value;
+                if(!quan){
+                    quan = 1;
+                }
                 var GF = {"name":"Solar Panel","price":price,"quantity":quan,"intP":15000};
                 var itemDetails = JSON.stringify(GF);
                 window.localStorage.setItem("Solar",itemDetails);

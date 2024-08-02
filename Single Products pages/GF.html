@@ -144,6 +144,9 @@
             
             function buy(){
                 var quan = document.getElementById("qtygf").value;
+                if(!quan){
+                    quan = 1;
+                }
                 var GF = {"name":"Green Roof Setup","price":price,"quantity":quan,"intP":60000};
                 var itemDetails = JSON.stringify(GF);
                 window.localStorage.setItem("GreenRoof",itemDetails);
