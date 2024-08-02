@@ -130,13 +130,13 @@
     <div class="text"class="images">
         <h1 id="price">₹15,000</h1>
         <input id="qtysp" type="number" placeholder="Qty">
-        <button id="b1"><a href="#"> Buy Now</button></a>
+        <button id="b1" onclick=getQ()><a href="#"> Buy Now</button></a>
         <script>
             var price = document.getElementById("price").innerHTML;
             price = price.slice(1,7);
             function buy(){
                 var quan = document.getElementById("qtysp").value;
-                var GF = {"name":"Solar","price":price,"quantity":quan.toString()};
+                var GF = {"name":"Solar Panel","price":price,"quantity":quan,"intP":15000};
                 var itemDetails = JSON.stringify(GF);
                 window.localStorage.setItem("Solar",itemDetails);
             }
@@ -157,6 +157,18 @@
                         //cancelButtonColor: '#d33'
                     })
                 }
+            }
+            function getQ(){
+                var quan = document.getElementById("qtysp").value;
+                var amt = 15000;
+                if(!quan){
+                    amt = 15000;
+                }
+                else{
+                    amt = quan * 15000;
+                }
+                window.localStorage.setItem("amt","15000");
+                location.href = "../html/Buy_now.html";
             }
         </script>
         <button class="addtocart" onclick=buy()>
@@ -181,7 +193,7 @@
             <li class="slide-up">Customizable Dimensions</li>
             <li class="slide-up">Seamless Integration</li>
             <li class="slide-up"> Quick Payback Period</li>
-              <li class="slide-up">High Energy Storage Compatibility</li>
+            <li class="slide-up">High Energy Storage Compatibility</li>
           
         </ol>
     </div>

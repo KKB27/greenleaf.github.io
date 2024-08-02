@@ -129,14 +129,14 @@
     <div class="text"class="images">
         <h1 id="price">₹8,000</h1>
         <input id="qtygwr" type="number" placeholder="Qty">
-        <button id="b1"><a href="#"> Buy Now</button></a>
+        <button id="b1" onclick=getQ()><a href="#"> Buy Now</button></a>
         <script>
             var price = document.getElementById("price").innerHTML;
             price = price.slice(1,7);
             
             function buy(){
                 var quan = document.getElementById("qtygwr").value;
-                var GF = {"name":"Grey Water Recycling","price":price,"quantity":quan};
+                var GF = {"name":"Grey Water Recycling System","price":price,"quantity":quan,"intP":8000};
                 var itemDetails = JSON.stringify(GF);
                 window.localStorage.setItem("GWR",itemDetails);
             }
@@ -157,6 +157,18 @@
                         //cancelButtonColor: '#d33'
                     })
                 }
+            }
+            function getQ(){
+                var quan = document.getElementById("qtygwr").value;
+                var amt = 8000;
+                if(!quan){
+                    amt = 8000;
+                }
+                else{
+                    amt = quan * 8000;
+                }
+                window.localStorage.setItem("amt",amt);
+                location.href = "../html/Buy_now.html";
             }
         </script>
 <button class="addtocart" onclick=buy()>

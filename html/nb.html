@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Payment</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rosarivo:ital@0;1&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Rosarivo:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/common.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/sweetalert2.min.css">
     <style>
         h1{
             text-align: center;
@@ -19,10 +22,12 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+            align-items: center;
             margin: auto;
+            text-align: center;
             border-radius: 10px 0px;
             width:300px;
-            background-color: rgb(102, 147, 10);
+            background-color: rgb(47, 68, 4);
             color: white;
             font-family: Lora;
             border: none;
@@ -30,6 +35,7 @@
         legend{
             font-family: Lora;
             font-size: larger;
+            align-items: center;
         }
         #divi{
             display: flex;
@@ -42,6 +48,7 @@
             color:white;
             cursor: pointer;
             transition: transform 0.3s ease;
+            border-radius: 10px;
         }
         #sub:hover{
             transform: scale(1.08);
@@ -49,13 +56,109 @@
     </style>
 </head>
 <body>
+    <nav class="navbar navbar-expand-md" style="position: sticky;top:0;">
+        <a class="navbar-brand" href="../index2.html"> &nbsp;<img src="../images/logoMain2.jpg" height="50px"> &nbsp; Green Leaf Solutions</a>
+        <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#main-navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-navigation">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index2.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="grid.html">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../html/Faqs.html">FAQs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="calc.html">Carbon Footprint Calculator</a>
+                </li>
+
+                <li class="nav-item">
+                    <button class="nav-link" style="background-color: transparent; border: none;"><img src="../images/cart.png" alt="cart" height="40px" onclick=cart()></button> 
+                </li>
+                <script>
+                    function cart(){
+                        var ans = window.localStorage.getItem("SignIn");
+                        if(ans == "true"){
+                            document.location.href = "../html/cart.html";
+                        }
+                        else{
+                            Swal.fire({
+                                title: 'Not signed in',
+                                text: 'You can\'t have a cart without signing in',
+                                icon: 'error',
+                                //showCancelButton: true,
+                                confirmButtonText: 'OK',
+                                //cancelButtonText: 'No, cancel!',
+                                confirmButtonColor: '#023402',
+                                //cancelButtonColor: '#d33'
+                            })
+                        }
+                    }
+                </script>
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <br>
     <h1>ENTER YOUR CREDIT CARD DETAILS</h1>
+    <br>
         <fieldset class="form">
             <fieldset><legend>USERNAME</legend><input type="text" class="in"></div></fieldset><BR>
             <fieldset><legend>PASSWORD</legend><input type="password" class="in"></div></fieldset><br>
-            <fieldset><legend>ENTER AMOUNT TO BE PAID</legend><input type="text" class="in"></div></fieldset><BR>
-            <fieldset><legend>BILLING ADDRESS</legend><input type="text" class="in" placeholder="Enter your address here"></div></fieldset><BR>
-            <div id="divi"><input type="submit" id="sub"></div>
+            <fieldset><legend>AMOUNT TO BE PAID</legend><p id="amt1"></p></fieldset><BR>
+                <fieldset><legend>BILLING ADDRESS</legend><input type="text" class="in" placeholder="Enter your address here"></div></fieldset><BR>
+            <div id="divi"><input type="submit" id="sub" onclick=paid()></div>
+            <script>
+                var amount = window.localStorage.getItem("amt");
+                document.getElementById("amt1").innerHTML = amount;
+
+                function paid(){
+                    Swal.fire({
+                        title: 'Succesfully Paid!',
+                        text: 'Thank you for choosing Green Leaf',
+                        icon: 'success',
+                        //showCancelButton: true,
+                        confirmButtonText: '&#128522',
+                        //cancelButtonText: 'No, cancel!',
+                        confirmButtonColor: '#023402',
+                        //cancelButtonColor: '#d33'
+                    }).then((result)=>{
+                        localStorage.clear();
+                        window.localStorage.setItem("SignIn","true");
+                        location.href = "../index.html";
+                    })
+                }
+            </script>
         </fieldset>
+<br>
+<br>
+<footer class="page-footer" style="text-align: center;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12" style="text-align: center;">
+                <h1 style="color: white !important;"> <img src="../images/logoMain2.jpg" width="4%"> Green Leaf Solutions
+                <br><a href="instagram.com"><img src="../images/insta.png" width="4%" style="border: 0.5rem solid black;border-radius: 30%;"></a>
+                <a href="linkedin.com"><img src="../images/linkedin.png" width="4%" style="border: 0.5rem solid black;border-radius: 30%;"></a>
+                <a href="facebook.com"><img src="../images/fb.png" width="4%" style="border: 0.5rem solid black;border-radius: 30%;"></a>
+                </h1>
+            </div>
+        </div>
+        <div class="footer-copyright text-center" >Email us at : <a href="mailto:greenleafsolutions@gmail.com" style="text-decoration: none; color: white;">greenleafsolutions@gmail.com</a></div>
+        <div class="footer-copyright text-center">We Accept: &nbsp; UPI &nbsp; Credit Card &nbsp; Debit Card &nbsp; Net Banking <sup>*</sup></div>
+       
+    <div class="footer-copyright text-center">Privacy Policy</div>
+    <div class="footer-copyright text-center">© All rights reserved: greenleafsolutions Pvt Ltd</div>
+    <div class="footer-copyright text-center"><sup>*</sup>From Indian Banks only</div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="../js/common.js"></script>
+<script src="../js/sweetalert2.min.js"></script>
 </body>
 </html>

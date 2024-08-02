@@ -69,7 +69,7 @@ function newfunc(){
             confirmButtonColor: '#023402',
             //cancelButtonColor: '#d33'
         }).then((result)=>{
-            location.reload();
+            location.href = "../index.html";
         })
         
     }

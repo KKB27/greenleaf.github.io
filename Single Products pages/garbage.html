@@ -132,14 +132,14 @@
     <div class="text"class="images">
         <h1 id="price">₹500</h1>
         <input id="qtygar" type="number" placeholder="Qty">
-        <button id="b1"><a href="#"> Buy Now</button></a>
+        <button id="b1" onclick=getQ()><a href="#"> Buy Now</button></a>
         <script>
             var price = document.getElementById("price").innerHTML;
             price = price.slice(1,7);
             
             function buy(){
                 var quan = document.getElementById("qtygar").value;
-                var GF = {"name":"Garbage Cans","price":price,"quantity":quan};
+                var GF = {"name":"Garbage Cans","price":price,"quantity":quan,"intP":500};
                 var itemDetails = JSON.stringify(GF);
                 window.localStorage.setItem("Garbage",itemDetails);
             }
@@ -160,6 +160,19 @@
                         //cancelButtonColor: '#d33'
                     })
                 }
+            }
+
+            function getQ(){
+                var quan = document.getElementById("qtygar").value;
+                var amt = 500;
+                if(!quan){
+                    amt = 500;
+                }
+                else{
+                    amt = quan * 500;
+                }
+                window.localStorage.setItem("amt",amt);
+                location.href = "../html/Buy_now.html";
             }
         </script>
 <button class="addtocart" onclick=buy()>
