@@ -14,7 +14,7 @@ function Sign(){
                 //showCancelButton: true,
                 confirmButtonText: 'OK',
                 //cancelButtonText: 'No, cancel!',
-                confirmButtonColor: '#023402',
+                confirmButtonColor: '#00403f',
                 //cancelButtonColor: '#d33'
             }).then((result) => {
                 if(result.isConfirmed){
@@ -32,7 +32,7 @@ function Sign2(){
                 //showCancelButton: true,
                 confirmButtonText: 'OK',
                 //cancelButtonText: 'No, cancel!',
-                confirmButtonColor: '#023402',
+                confirmButtonColor: '#00403f',
                 //cancelButtonColor: '#d33'
             }).then((result) => {
                 if(result.isConfirmed){
@@ -66,7 +66,7 @@ function newfunc(){
             //showCancelButton: true,
             confirmButtonText: 'OK',
             //cancelButtonText: 'No, cancel!',
-            confirmButtonColor: '#023402',
+            confirmButtonColor: '#00403f',
             //cancelButtonColor: '#d33'
         }).then((result)=>{
             location.href = "../index.html";

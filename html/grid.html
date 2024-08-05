@@ -13,75 +13,161 @@
     <link rel="stylesheet" href="../css/grid.css">
     <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/sweetalert2.min.css">
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Luxurious+Script&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <style>
+       a {
+           text-decoration: none;
+           color: white;
+       }
+       a:hover{
+        text-decoration: none;
+        color: white;
+       }
+       .gridPro2 img {
+           border-radius: 10px 15px;
+       }
+       .grid-container {
+          display: grid;
+          gap: 10px;
+          grid-template-columns: repeat(4, 1fr);
+          grid-template-rows: repeat(3, 200px);
+          width: 80%;
+          max-width: 1200px;
+          margin: auto;
+       }
+       .grid-item {
+          background-color: #fff;
+          border: 1px solid #ddd;
+          border-radius: 10px;
+          padding: 20px;
+          box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+       }
+       .grid-item:nth-child(1) {
+          grid-column: span 2;
+          grid-row: span 2;
+       }
+       .grid-item:nth-child(2) {
+          grid-column: 3 / span 1;
+          grid-row: 1 / span 1;
+       }
+       .grid-item:nth-child(3) {
+          grid-column: 4 / span 1;
+          grid-row: 1 / span 2;
+       }
+       .grid-item:nth-child(4) {
+          grid-column: 1 / span 2;
+          grid-row: 3 / span 1;
+       }
+       .grid-item:nth-child(5) {
+          grid-column: 3 / span 1;
+          grid-row: 3 / span 1;
+       }
+       .grid-item:nth-child(6) {
+          grid-column: 4 / span 1;
+          grid-row: 3 / span 1;
+       }
+       .placeholder {
+          grid-column: 3 / span 1;
+          grid-row: 2 / span 1;
+          background-color: transparent; /* Adjust the color as needed */
+          color: black;
+          display: flex;
+          text-align: center;
+          align-items: center;
+          justify-content: center;
+          font-family: Luxurious;
+       }
+       .grid-item h2 {
+          margin-top: 0;
+       }
+       #overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            align-items: center;
+            text-align: center;
+            border-radius: 10px;
+        }
+        
+        .soc{
+            background-color: #1b6e6d;
+            color: white;
+            font-size: 1rem;
+            font-weight: bolder;
+            height: fit-content;
+            width: fit-content;
+           
+        }
+
+    </style>
 </head>
-<style>
-   a{
-       text-decoration: none;
-   }
-    .gridPro2 img{
-        border-radius: 10px 15px;
-    }
-</style>
 <body>
     <div id="overlay2">
         <div class="grandFlex">
             <img src="../images/logoMain2.jpg" width="10%" style="border-radius: 50%;"><h1>Green Leaf Solutions</h1>
             
-                <div class="gridCont" id="trySign">
-                    <form>
-                        <label for="email" style="display: block; margin-bottom: 10px;">
-                            Email:
-                            <input type="email" id="email" name="email" required style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
-                        </label>
-                        <label for="username" style="display: block; margin-bottom: 10px;">
-                            Username:
-                            <input type="text" id="username" name="username" required style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
-                        </label>
-                        <label for="password" style="display: block; margin-bottom: 20px;">
-                            Password:
-                            <input type="password" id="password" name="password" required style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
-                        </label>
-                        <button type="button" id="signup" onclick=Sign2()>
-                            Sign Up
-                        </button>
-                        <h2>OR</h2>
-                        <button type="button" id="signup2" onclick=turnLog()>
-                            Log In
-                        </button>
-                       
-                    </form>
-                </div>
-                <div class="gridCont" id="tryLog" style="display: none;">
-                    <form>
-                        <label for="username2" style="display: block; margin-bottom: 10px;">
-                            Username:
-                            <input type="text" id="username2" name="username" required style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
-                        </label>
-                        <label for="password2" style="display: block; margin-bottom: 20px;">
-                            Password:
-                            <input type="password" id="password2" name="password" required style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
-                        </label>
-                        <button type="button" id="login" onclick=Sign()>
-                            Log In
-                        </button>
-                        <h2>OR</h2>
-                        <button type="button" id="login2" onclick=turnSign()>
-                            Sign Up
-                        </button>
-                    </form>
-                </div>
+            <div class="gridCont" id="trySign">
+                <form>
+                    <label for="email" style="display: block; margin-bottom: 10px;">
+                        Email:
+                        <input type="email" id="email" name="email" required style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
+                    </label>
+                    <label for="username" style="display: block; margin-bottom: 10px;">
+                        Username:
+                        <input type="text" id="username" name="username" required style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
+                    </label>
+                    <label for="password" style="display: block; margin-bottom: 20px;">
+                        Password:
+                        <input type="password" id="password" name="password" required style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
+                    </label>
+                    <button type="button" id="signup" onclick=Sign2()>
+                        Sign Up
+                    </button>
+                    <h2>OR</h2>
+                    <button type="button" id="signup2" onclick=turnLog()>
+                        Log In
+                    </button>
+                </form>
+            </div>
+            <div class="gridCont" id="tryLog" style="display: none;">
+                <form>
+                    <label for="username2" style="display: block; margin-bottom: 10px;">
+                        Username:
+                        <input type="text" id="username2" name="username" required style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
+                    </label>
+                    <label for="password2" style="display: block; margin-bottom: 20px;">
+                        Password:
+                        <input type="password" id="password2" name="password" required style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
+                    </label>
+                    <button type="button" id="login" onclick=Sign()>
+                        Log In
+                    </button>
+                    <h2>OR</h2>
+                    <button type="button" id="login2" onclick=turnSign()>
+                        Sign Up
+                    </button>
+                </form>
+            </div>
         </div>
-        
     </div>
     <nav class="navbar navbar-expand-md" style="position: sticky;top:0;">
         <a class="navbar-brand" href="../index2.html"> &nbsp;<img src="../images/logoMain2.jpg" height="50px"> &nbsp; Green Leaf Solutions</a>
-        <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#main-navigation">
+        <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#main-navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="main-navigation">
@@ -102,18 +188,17 @@
                     <a class="nav-link" href="calc.html">Carbon Footprint Calculator</a>
                 </li>
                 <li class="nav-item">
-                    <button class="nav-link" style="background-color: #004800; color: white !important; border-radius: 20px 20px;" onclick=newfunc() id="sgn">Sign In</button> 
+                    <button class="nav-link" style="color: white !important; border-radius: 20px 20px;" onclick=newfunc() id="sgn">Sign In</button> 
                 </li>
                 <li class="nav-item">
                     <button class="nav-link" style="background-color: transparent; border: none;"><img src="../images/cart.png" alt="cart" height="40px" onclick=cart()></button> 
                 </li>
                 <script>
-                    function cart(){
+                    function cart() {
                         var ans = window.localStorage.getItem("SignIn");
-                        if(ans == "true"){
+                        if (ans == "true") {
                             document.location.href = "../html/cart.html";
-                        }
-                        else{
+                        } else {
                             Swal.fire({
                                 title: 'Not signed in',
                                 text: 'You can\'t have a cart without signing in',
@@ -130,62 +215,58 @@
             </ul>
         </div>
     </nav>
-    <div class="grandFlex2">
-        <div class="gridCont2">
-            <a href="../Single Products pages/RWH.html">
-                <div class="gridPro2">
-                    <img src="../images/rainPro.jpg"><br>
-                    Rain Water Harvesting Kits<br>
-                    <button class="soc" type="button" >More details</button>
-                    
-                </div>
-            </a>
-            <a href="consultancy.html">
-            <div class="gridPro2">
-                <img src="../images/consultant.jpg"><br>
-                Consultation Service (Online)<br>
-                <button class="soc" type="button" >More details</button>
-                    
-            </div>
-            </a>
+    <br>
+    <br>
+    <div class="grid-container">
+        <a href="../Single Products pages/RWH.html" class="grid-item" style="background-image: url(../images/rainPro.jpg); background-repeat: no-repeat; background-size: cover;position: relative;">
+          <div id="overlay" style="position: absolute;;bottom: 0;">
+            <h2>Rain Water Harvesting Kits</h2>
+            <button class="soc" type="button">More details</button>
+            <br>
         </div>
-        <div class="gridCont2">
-            <a href="../Single Products pages/sp.html">
-            <div class="gridPro2">
-                <img src="../images/solar.png"><br>
-                Solar Panels + Installation<br>
-                <button class="soc" type="button" >More details</button>
-                    
+        </a>
+        <a href="consultancy.html" class="grid-item" style="background-image: url(../images/consult.jpg); background-repeat: no-repeat; background-size: cover;position: relative;">
+        <!--<img src="../images/consultant.jpg" alt="Consultation Service (Online)">-->  
+        <div id="overlay" style="position: absolute;;bottom: 0;">
+            <h2>Consultation Services</h2>
+            <button class="soc" type="button">More details</button>
             </div>
-            </a>
-         <a href="../Single Products pages/GF.html">
-            <div class="gridPro2">
-                <img src="../images/greenRoof.jpg"><br>
-                Green Roof Setup<br>
-                <button class="soc" type="button" >More details</button>
-                    
+        </a>
+        <a href="../Single Products pages/sp.html" class="grid-item" style="background-image: url(../images/solargrid.jpg); background-repeat: no-repeat; background-size: cover;position: relative;">
+        <!-- <img src="../images/solar.png" alt="Solar Panels + Installation">-->   
+        <div id="overlay" style="position: absolute;;bottom: 0;">
+            <h2>Solar Panels + Installation</h2>
+            <button class="soc" type="button">More details</button>
             </div>
-            </a>
-        </div>
-        <div class="gridCont2">
-            <a href="../Single Products pages/GWR.html">
-            <div class="gridPro2">
-                <img src="../images/greywater.jpg"><br>
-                Greywater Recycling Kit<br>
-                <button class="soc" type="button" >More details</button>
-                    
+        </a>
+        <a href="../Single Products pages/GF.html" class="grid-item" style="background-image: url(../images/greenP.jpg); background-repeat: no-repeat; background-size: cover;position: relative;">
+        <!--<img src="../images/greenRoof.jpg" alt="Green Roof Setup">-->    
+        <div id="overlay" style="position: absolute;bottom: 0;">
+            <h2>Green Roof Setup</h2>
+            <button class="soc" type="button">More details</button>
             </div>
-            </a>
-            <a href="../Single Products pages/garbage.html">
-            <div class="gridPro2">
-                <img src="../images/bin.png"><br>
-                Segregating Garbage Cans<br>
-                <button class="soc" type="button" >More details</button>
-                    
+        </a>
+        <a href="../Single Products pages/GWR.html" class="grid-item" style="background-image: url(../images/greyP.jpg); background-repeat: no-repeat; background-size: cover;position: relative;">
+        <!--<img src="../images/greywater.jpg" alt="Greywater Recycling Kit">-->    
+        <div id="overlay" style="position: absolute;bottom: 0;">
+            <h2>Greywater Recycling Kit</h2>
+            <button class="soc" type="button">More details</button>
             </div>
-            </a>
+        </a>
+        <a href="../Single Products pages/garbage.html" class="grid-item" style="background-image: url(../images/bin.png); background-repeat: no-repeat; background-size: cover;position: relative;">
+        <!--<img src="../images/bin.png" alt="Segregating Garbage Cans">-->    
+        <div id="overlay" style="position: absolute;bottom: 0;">
+            <h2>Garbage Cans</h2>
+            <button class="soc" type="button">More details</button>
+            </div>
+        </a>
+        <div class="placeholder">
+            <h2 style="font-size: 4rem;">Our Products</h2>
         </div>
     </div>
+
+    <br>
+    <br>
     <img src="../images/trees_footer.png" width="100%">
     <footer class="page-footer" style="text-align: center;">
         <div class="container">
@@ -201,9 +282,9 @@
             <div class="footer-copyright text-center" >Email us at : <a href="mailto:greenleafsolutions@gmail.com" style="text-decoration: none; color: white;">greenleafsolutions@gmail.com</a></div>
             <div class="footer-copyright text-center">We Accept: &nbsp; UPI &nbsp; Credit Card &nbsp; Debit Card &nbsp; Net Banking <sup>*</sup></div>
            
-        <div class="footer-copyright text-center">Privacy Policy</div>
-        <div class="footer-copyright text-center">© All rights reserved: greenleafsolutions Pvt Ltd</div>
-        <div class="footer-copyright text-center"><sup>*</sup>From Indian Banks only</div>
+            <div class="footer-copyright text-center">Privacy Policy</div>
+            <div class="footer-copyright text-center">© All rights reserved: greenleafsolutions Pvt Ltd</div>
+            <div class="footer-copyright text-center"><sup>*</sup>From Indian Banks only</div>
     </footer>
     <script src="../js/common.js"></script>
     <script src="../js/sweetalert2.min.js"></script>
