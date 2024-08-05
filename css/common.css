@@ -11,7 +11,7 @@ body {
 .navbar {
     background-color: white !important;
     position: sticky;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     top:0;
     font-size: 1.3rem;
     font-family: merri weather sans;
@@ -46,7 +46,7 @@ a.navbar-brand:hover{
 }
 nav{
     position: sticky;
-    background-color: forestgreen;
+    background-color: rgb(4,68,60);
     top:0;
 }
 .nav-link{
@@ -130,7 +130,7 @@ legend {
 }
 
 #login{
-    background-color: #023402;
+    background-color: rgba(3,51,48,255);
     color: white;
     font-size: 1.2rem;
     margin: 10px;
@@ -138,7 +138,7 @@ legend {
     border-radius: 16px;
 }
 #signup{
-    background-color: #023402;
+    background-color: rgba(3,51,48,255);
     color: white;
     font-size: 1.2rem;
     margin: 10px;
@@ -147,7 +147,7 @@ legend {
 }
 
 #login2{
-    background-color: #023402;
+    background-color: rgba(3,51,48,255);
     color: white;
     font-size: 1.2rem;
     margin: 10px;
@@ -155,7 +155,7 @@ legend {
     border-radius: 16px;
 }
 #signup2{
-    background-color: #023402;
+    background-color: rgba(3,51,48,255);
     color: white;
     font-size: 1.2rem;
     margin: 10px;
