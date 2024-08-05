@@ -1,23 +1,24 @@
 .aboutus{
-    background-color: #18392B;
+    background-color: transparent;
     height:auto;
     text-align: center;
     font-size: 1.25rem;
-    color: white;
+    color: black;
     padding: 20px;
     margin: 10px;    
+    border: 2px solid 00403f;
     border-radius: 10px;
     font-family: Lora;
     line-height: 35px;
 }
 h1{
-    color: forestgreen;
+    color: #00403f;
     font-size: 3rem;
     text-align: center;
     font-family: Rosarivo;
 }
 h2{
-    color: rgb(6, 36, 28);
+    color: #00403f;
     text-align: center;
     font-family: Rosarivo;
 }
@@ -34,11 +35,20 @@ h2{
     width:20%;
     margin:2%;
     border-radius: 10px;
-    background-color: #A8E4A0;
+    background-color: rgba(245, 245, 245, 0.438);
+    border: 2px solid #00403f ;
     box-shadow: 3px 3px 10px 3px grey;
-    
 }
-
+.item2{
+    height: 150px;
+    width:20%;
+    margin:2%;
+    color: white;
+    border-radius: 10px;
+    background-color: #00403f;
+    border: 1px solid white ;
+    box-shadow: 3px 3px 10px 3px grey;
+}
 .name{
     text-align: center;
     font-family: Montserrat;

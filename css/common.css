@@ -8,18 +8,25 @@ body {
     color:  #00004d;
     background: #FFD700;
 }
+
+.grey-qo-regular {
+    font-family: "Grey Qo", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
 .navbar {
     background-color: white !important;
     position: sticky;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     top:0;
     font-size: 1.3rem;
-    font-family: merri weather sans;
+    font-family: Futura Bold;
     
 }
 
-.navbar button{
-    background-color: #00403f ;
+.nav-item button{
+    background-color: #00403f;
 }
 
 .navbar img{
@@ -166,4 +173,35 @@ legend {
     margin: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 16px;
+}
+
+footer{
+    padding-bottom: 2%;
+}
+
+footer h1{
+    color: white;
+}
+
+footer img{
+    border: 2px solid white;
+}
+
+.social-icons a {
+    color: white; /* Set icon color to white */
+    display: inline-block;
+    margin: 0 5px;
+    padding: 10px;
+    border-radius: 50%;
+    text-align: center;
+    width: 70px;
+    height: 70px;
+    line-height: 30px; /* Align icon vertically */
+}
+.social-icons a i {
+    font-size: 40px; /* Increase icon size */
+}
+
+.social-icons a:hover {
+    color: #ddd; /* Optional: change color on hover */
 }
