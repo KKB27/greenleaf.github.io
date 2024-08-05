@@ -91,14 +91,14 @@ h2 {
 }
 
 button{
-    background-color: #388813;
+    background-color: rgba(3,51,48,255);
     border: none;  
     color: white;
 }
 
 #ind, #soc {
     font-family: Rosarivo;
-    background-color: #388813;
+    background-color: rgba(3,51,48,255);
     border: none;
     box-shadow: 5px 5px 5px grey;
     color: white;

@@ -18,15 +18,15 @@ h2{
     padding: 10px;
 }
 #related{
-    background-color: #004800;
+    background-color:rgba(3,51,48,255);
     color: aliceblue;
 }
 .accordion-body{
     font-family: Lora;
 }
 .accordion-button:not(.collapsed) {
-    background-color: rgb(124, 212, 124); 
-    color: rgb(4, 61, 4); 
-    border-color: rgb(106, 218, 106)!important;
+    background-color: #1f5757;
+    color: white;
+    border-color:  #437474!important;
 }
 
