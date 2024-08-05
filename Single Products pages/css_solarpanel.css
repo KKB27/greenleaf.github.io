@@ -19,7 +19,7 @@
     top:0.9;
     left:50%;
     transform: translateX(-50%);
-    font-family: "Cosi times";
+    font-family:"Lucida Handwriting", cursive;
     padding: 1em;
     z-index: 900 !important;
     background-color: #fff;
