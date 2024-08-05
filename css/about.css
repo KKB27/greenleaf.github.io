@@ -11,7 +11,7 @@
     line-height: 35px;
 }
 h1{
-    color: forestgreen;
+    color: rgba(3,51,48,255);
     font-size: 3rem;
     text-align: center;
     font-family: Rosarivo;
@@ -34,8 +34,9 @@ h2{
     width:20%;
     margin:2%;
     border-radius: 10px;
-    background-color: #A8E4A0;
+    background-color: #1f5757;
     box-shadow: 3px 3px 10px 3px grey;
+    color:aliceblue;
     
 }
 
