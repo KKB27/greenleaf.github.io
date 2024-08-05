@@ -38,9 +38,9 @@ body {
 }
 
 .nav-link:hover {
-    color: #15bd23;
+    color: #13893ca2;
     font-weight:1200 ;
-    border-bottom: 3px solid red;
+    border-bottom: 3px solid rgb(67,116,108);
    }
 
 a.navbar-brand:hover{
