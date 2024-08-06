@@ -5,7 +5,7 @@
 .item{
     height: fit-content;
     width: 20%;
-    background-color: green;
+    background-color: #1f5757;
     text-align:center;
     border-radius: 10px 10px;
     transition: transform 0.5s ease;
