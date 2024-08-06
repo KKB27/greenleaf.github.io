@@ -80,6 +80,9 @@ nav.navbar{
 .page-footer a:hover{
     color: rgb(241, 105, 209);
 }
+.page-footer a{
+        font-size: 5vw;
+}
 .page-footer img{
     border-color: transparent !important;
     width: 5.5% !important;
