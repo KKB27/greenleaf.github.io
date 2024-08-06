@@ -28,7 +28,7 @@
        a {
            text-decoration: none;
            color: white;
-           font-size: 1.2rem !important;
+           font-size: 1vw;
        }
        a:hover{
         text-decoration: none;
@@ -86,6 +86,7 @@
           text-align: center;
           align-items: center;
           justify-content: center;
+          font-weight: bolder;
           font-family: Luxurious Script;
        }
        .grid-item h2 {
@@ -105,19 +106,62 @@
             align-items: center;
             text-align: center;
             border-radius: 10px;
-           font-size:0.5vw;
         }
         
         .soc{
             background-color: #1b6e6d;
             color: white;
-            font-size: 0.7rem;
             font-weight: bolder;
             height: fit-content;
             width: fit-content;
-           
         }
-
+        @media (max-width: 480px) {
+            .grid-container{
+                width: 90%;
+                display: flex;
+                font-size: 1rem;
+                flex-direction: column;
+            }
+            .grid-item {
+                background-color: #fff;
+                border: 1px solid #ddd;
+                border-radius: 10px;
+                padding: 20px;
+                box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+                width: 100%;
+                text-align: center;
+            }
+            .placeholder{
+                display: none;
+            }
+            .placeholder2 {
+                background-color: transparent; /* Adjust the color as needed */
+                color: black;
+                display: flex;
+                text-align: center;
+                font-weight: bolder;
+                font-size: 1rem;
+            }
+            #overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+                color: white;
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
+                align-items: center;
+                text-align: center;
+                border-radius: 10px;
+            }
+            .soc{
+                display: none;
+            }
+            
+        }
     </style>
 </head>
 <body>
@@ -222,6 +266,9 @@
     <br>
 
     <div class="grid-container">
+        <div class="grid-item placeholder2" style="text-align: center;">
+            Our Products
+        </div>
         <a href="../Single Products pages/RWH.html" class="grid-item" style="background-image: url(../images/rainPro.jpg); background-repeat: no-repeat; background-size: cover;position: relative;">
           <div id="overlay" style="position: absolute;;bottom: 0;">
             <h2>Rain Water Harvesting Kits</h2>
