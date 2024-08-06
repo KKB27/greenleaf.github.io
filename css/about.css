@@ -36,10 +36,9 @@ h2{
     width:20%;
     margin:2%;
     border-radius: 10px;
-<<<<<<< HEAD
-    background-color: rgba(245, 245, 245, 0.438);
-    border: 2px solid #00403f ;
-    box-shadow: 3px 3px 10px 3px grey;
+background-color: #1f5757;
+box-shadow: 3px 3px 10px 3px grey;
+color:aliceblue;
 }
 .item2{
     height: 150px;
@@ -50,12 +49,6 @@ h2{
     background-color: #00403f;
     border: 1px solid white ;
     box-shadow: 3px 3px 10px 3px grey;
-=======
-    background-color: #1f5757;
-    box-shadow: 3px 3px 10px 3px grey;
-    color:aliceblue;
-    
->>>>>>> 48857d39720e4c8c05be8984085ce34091f3fb88
 }
 .name{
     text-align: center;
