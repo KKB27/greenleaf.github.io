@@ -61,15 +61,15 @@ function validate(names, gas_val){
     var pipey= document.querySelector("#pipe_bill").value;
 
     if(areas == 'Select'){
-        alert("Please fill in the required field");
+        alert("Please choose the area you live in");
         return false;
     }
     else if(names== "soc" && houseno == ''){
-        alert("Please fill in the required field");
+        alert("Please fill in the no. of houses");
         return false;
     }
     else if(el_bill == ''){
-        alert("Please fill in the required field");
+        alert("Please enter your electricity consumption");
         return false;
     }
     else if(!gas_val){
@@ -77,11 +77,11 @@ function validate(names, gas_val){
         return false;
     }
     else if (gas_val == 'cyl' && cyli ==''){
-        alert("Please fill in the required field");
+        alert("Please enter the no. of cylinders you purchase yearly");
         return false;
     }
     else if(gas_val == 'pipe' && pipey ==''){
-        alert("Please fill in the required field");
+        alert("Please enter your gas consumption");
         return false;
     }
     return true;
