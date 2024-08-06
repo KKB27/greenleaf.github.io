@@ -13,7 +13,8 @@ body{
 }
 
 .carousel {
-    width: 40%; 
+    width: 40%;
+    margin-left: -10%;
 }
 
 .carousel-inner {
