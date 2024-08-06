@@ -121,6 +121,7 @@
                 display: flex;
                 font-size: 1rem;
                 flex-direction: column;
+                justify-content: space-evenly;
             }
             .grid-item {
                 background-color: #fff;
@@ -129,18 +130,13 @@
                 padding: 20px;
                 box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
                 width: 100%;
-                text-align: center;
+                height: max-content;
+                background-image: none !important;
+                margin-top: 20px;
+                margin-bottom: 10px;
             }
             .placeholder{
                 display: none;
-            }
-            .placeholder2 {
-                background-color: transparent; /* Adjust the color as needed */
-                color: black;
-                display: flex;
-                text-align: center;
-                font-weight: bolder;
-                font-size: 1rem;
             }
             #overlay {
                 position: absolute;
@@ -148,7 +144,7 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+                background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
                 color: white;
                 display: flex;
                 flex-direction: column;
@@ -156,6 +152,7 @@
                 align-items: center;
                 text-align: center;
                 border-radius: 10px;
+                height: fit-content;
             }
             .soc{
                 display: none;
@@ -266,9 +263,6 @@
     <br>
 
     <div class="grid-container">
-        <div class="grid-item placeholder2" style="text-align: center;">
-            Our Products
-        </div>
         <a href="../Single Products pages/RWH.html" class="grid-item" style="background-image: url(../images/rainPro.jpg); background-repeat: no-repeat; background-size: cover;position: relative;">
           <div id="overlay" style="position: absolute;;bottom: 0;">
             <h2>Rain Water Harvesting Kits</h2>
