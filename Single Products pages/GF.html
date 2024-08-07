@@ -29,18 +29,8 @@
 </head>
    <style>
       body{
-         background-color:white;
-      }
-      @media (max-width:1024px){
-         .vtext{
-            display: flex;
-            flex-direction: column;
-         }
-         .content{
-            display: flex;
-            flex-direction: column;
-         }
-      }
+         background-color:white;}
+      
    </style>
 <body>
     <div id="overlay2">
@@ -135,19 +125,18 @@
      <div class="logo-container">
         <h2 style="font-size:1.2rem; box-shadow: 0 5px 0 rgb(81, 79, 79);" class="logo">Green Roof</h2>
     </div>
-    <div class="container">
+    <div class="container"></div>
     <div class="content">
         <img src="../Single Products pages/images/greenroof1.jpeg" class="enlarged" alt="greenroof" id="enlarge"> 
         <section class="home">
             <img src="../Single Products pages/images/LeafLeft.png" alt="Left Leaf" class="leafl" class="leaf">
             <imgb1 src="../Single Products pages/images/leafRight.png" alt="Right Leaf" class="leafr" class="leaf">
         </section> 
-    </div>
+    
     <div class="images">
         <img src="../Single Products pages/images/greenroof1.jpeg" class="images" alt="Filter Small" id="small1" class="grid-item item1"> 
         <img src="../Single Products pages/images/Greenroof.png" class="images" alt="Components" id="comp" class="grid-item item2"> 
-    </div>
-      <div class="text" class="images">
+    <div class="text" class="images">
         <h1 id="price">₹60,000</h1>
         <input id="qtygf" type="number" placeholder="Qty">
         <button id="b1" onclick=getQ()><a href="#"> Buy Now</button></a>
@@ -195,7 +184,6 @@
                 location.href = "../html/Buy_now.html";
             }
         </script>
-      </div>
         <button class="addtocart" onclick=buy()>
             <div class="pretext">
               <i class="fas fa-cart-plus"></i> ADD TO CART
@@ -205,7 +193,9 @@
               <div class="posttext"><i class="fas fa-check"></i> ADDED</div>
             </div>
           </button>
-       </div>
+    </div>
+    </div>
+    </div>
     <h2 style="font-size:62px; font-family:cursive;">Features</h2>
         <img src="../Single Products pages/images/separation.png" id="line">
         <div class="vtext">
