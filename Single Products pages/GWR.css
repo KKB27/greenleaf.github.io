@@ -153,7 +153,7 @@
   font-size:1.2rem;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   color:#fff;
-    background:#12722a;
+    background:rgba(3,51,48,255);
     border: none;
     border-radius: 100px;
 
@@ -234,7 +234,7 @@
   }
   .pretext{
     color:#fff;
-    background:#12722a;
+    background:rgba(3,51,48,255);
     position:absolute;
     top:0;
     font-size:20px;
@@ -250,7 +250,7 @@
     margin-right:10px;
   }
   .done{
-    background:#35b928;
+    background: #1f5757;
     position:absolute;
     width:100%;
     top:0;
@@ -260,7 +260,7 @@
     transform:translate(-110%) skew(-40deg);
   }
   .posttext{
-    background:#35b928;
+    background: #1f5757;
   }
 
   
