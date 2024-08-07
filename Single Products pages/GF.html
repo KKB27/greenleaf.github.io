@@ -36,7 +36,10 @@
             display: flex;
             flex-direction: column;
          }
-         
+         .content{
+            display: flex;
+            flex-direction: column;
+         }
       }
    </style>
 <body>
@@ -139,11 +142,12 @@
             <img src="../Single Products pages/images/LeafLeft.png" alt="Left Leaf" class="leafl" class="leaf">
             <imgb1 src="../Single Products pages/images/leafRight.png" alt="Right Leaf" class="leafr" class="leaf">
         </section> 
-    
+    </div>
     <div class="images">
         <img src="../Single Products pages/images/greenroof1.jpeg" class="images" alt="Filter Small" id="small1" class="grid-item item1"> 
         <img src="../Single Products pages/images/Greenroof.png" class="images" alt="Components" id="comp" class="grid-item item2"> 
-    <div class="text" class="images">
+    </div>
+      <div class="text" class="images">
         <h1 id="price">₹60,000</h1>
         <input id="qtygf" type="number" placeholder="Qty">
         <button id="b1" onclick=getQ()><a href="#"> Buy Now</button></a>
@@ -191,6 +195,7 @@
                 location.href = "../html/Buy_now.html";
             }
         </script>
+      </div>
         <button class="addtocart" onclick=buy()>
             <div class="pretext">
               <i class="fas fa-cart-plus"></i> ADD TO CART
@@ -200,9 +205,6 @@
               <div class="posttext"><i class="fas fa-check"></i> ADDED</div>
             </div>
           </button>
-    </div>
-    </div>
-    </div>
        </div>
     <h2 style="font-size:62px; font-family:cursive;">Features</h2>
         <img src="../Single Products pages/images/separation.png" id="line">
