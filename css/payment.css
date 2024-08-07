@@ -11,7 +11,7 @@
     transition: all 0.2s linear;
 }
 
-.container {
+.container2 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,20 +20,20 @@
     background: #ffffff;
 }
 
-.container form {
+.container2 form {
     width: 700px;
     padding: 20px;
     background: #fff;
     box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
 }
 
-.container form .row {
+.container2 form .row {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
 }
 
-.container form .row .col {
+.container2 form .row .col {
     flex: 1 1 250px;
 }
 
@@ -81,7 +81,7 @@
     filter: drop-shadow(0 0 1px #000);
 }
 
-.container form .submit_btn {
+.container2 form .submit_btn {
     width: 100%;
     padding: 12px;
     font-size: 17px;
@@ -92,7 +92,7 @@
     letter-spacing: 1px;
 }
 
-.container form .submit_btn:hover {
+.container2 form .submit_btn:hover {
     background: #3d17fb;
 }
 
