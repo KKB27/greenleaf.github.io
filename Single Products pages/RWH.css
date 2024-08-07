@@ -3,6 +3,8 @@
     padding:0;
     box-sizing: border-box;
 }
+body{overflow-x: hidden;
+}
 .nav{
     position: fixed;
     width: 100%;
@@ -149,15 +151,14 @@ color:#fff;
 margin-left: 30px;
 }
 #b1 a{
-text-decoration: none;
-font-size:1.2rem;
-font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-color:#fff;
-  background:#12722a;
-  border: none;
-  border-radius: 100px;
-
-font-weight: bolder;
+  text-decoration: none;
+  font-size:1.2rem;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color:#fff;
+    background:rgba(3,51,48,255);
+    border: none;
+    border-radius: 100px;
+    font-weight: bolder;
 }
 #b1:hover{
   cursor:pointer;
@@ -214,7 +215,7 @@ font-weight: bolder;
     0% {transform: translateY(0); opacity:0;}
     100% {transform: translateY(-40px);opacity:1;}
   }
-  .addtocart{
+.addtocart{
     display:block;
     padding:0.5em 1em 0.5em 1em;
     border-radius:100px;
@@ -251,7 +252,7 @@ font-weight: bolder;
     margin-right:10px;
   }
   .done{
-    background:rgba(3,51,48,255);
+    background:#1f5757;
     position:absolute;
     width:100%;
     top:0;
