@@ -19,7 +19,9 @@
     padding: 25px;
     background: #ffffff;
 }
-
+.container2 form button{
+    rgba(3,51,48,255);
+}
 .container2 form {
     width: 700px;
     padding: 20px;
