@@ -81,15 +81,19 @@
            <p><a href="nb.html">NET BANKING</href></p>
         </div>
         <div class="item">
-            <p><a href="cc.html">CREDIT CARD</href></p>
-        </div>
-        <div class="item">
             <p><a href="dc.html">DEBIT CARD</href></p>
         </div>
         <div class="item">
             <p><a href="upi.html">UPI</href></p>
         </div>
     </div>
+    <div style="width: 100%;text-align: center;font-size: 1.2rem;color: black;">Total: <div id="amt"></div></div>
+    <script>
+        var amt = localStorage.getItem("amt");
+        if(amt){
+            document.getElementById("amt").innerHTML = amt;
+        }
+    </script>
     <br>
     <br>
     <img src="../images/trees_footer.png" width="100%">
