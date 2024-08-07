@@ -81,24 +81,27 @@ nav.navbar{
     color: rgb(241, 105, 209);
 }
 .page-footer a{
-        font-size: 5vw;
+        font-size: 2vw;
 }
 .page-footer img{
     border-color: transparent !important;
     width: 5.5% !important;
     border-radius: 50%;
 }
-@media (max-width: 480px){
+@media screen and (max-device-width: 1200px){
     .page-footer h1 img{
         border-color: transparent !important;
         width: 15% !important;
         border-radius: 50%;
     }
+    .col-12 a{
+         font-size: 5vw;
+    }
     .page-footer{
         font-size: 5vw;
     }
     .page-footer h1{
-        font-size: 7vw;
+        font-size: 6vw;
     }
 }
 #overlay2 {
