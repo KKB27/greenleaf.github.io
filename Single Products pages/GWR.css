@@ -3,6 +3,8 @@
     padding:0;
     box-sizing: border-box;
   }
+body{overflow-x: hidden;
+}
   .nav{
     position: fixed;
     width: 100%;
@@ -212,8 +214,7 @@
     100% {transform: translateY(-40px);opacity:1;}
   }
 
-  
-  .addtocart{
+.addtocart{
     display:block;
     padding:0.5em 1em 0.5em 1em;
     border-radius:100px;
@@ -250,7 +251,7 @@
     margin-right:10px;
   }
   .done{
-    background: #1f5757;
+    background:#1f5757;
     position:absolute;
     width:100%;
     top:0;
@@ -260,7 +261,7 @@
     transform:translate(-110%) skew(-40deg);
   }
   .posttext{
-    background: #1f5757;
+    background:#1f5757;
   }
 
   
