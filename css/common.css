@@ -73,6 +73,7 @@ nav.navbar{
 .page-footer{
     background-color: rgba(3,51,48,255);
     color: white;
+    font-size: 1.1rem;;
 }
 .page-footer h1{
     font-family: playfair display;
@@ -81,7 +82,7 @@ nav.navbar{
     color: rgb(241, 105, 209);
 }
 .page-footer a{
-        font-size: 2vw;
+        font-size: 1.1rem;;
 }
 .page-footer img{
     border-color: transparent !important;
@@ -95,13 +96,13 @@ nav.navbar{
         border-radius: 50%;
     }
     .col-12 a{
-         font-size: 5vw;
+         font-size: 1.1rem;;
     }
     .page-footer{
-        font-size: 5vw;
+        font-size: 1.1rem;;
     }
     .page-footer h1{
-        font-size: 6vw;
+        font-size: 1.1rem;;
     }
 }
 #overlay2 {
