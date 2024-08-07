@@ -18,7 +18,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/sweetalert2.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="../css/net_banking.css">
     <style>
         h1{
             text-align: center;
@@ -49,7 +49,7 @@
             margin-bottom: 10px;
         }
         #sub{
-            height: 30px;
+            height: 30px; 
             background-color: #198754;
             color:white;
             cursor: pointer;
@@ -115,34 +115,120 @@
     <br>
     <h1>ENTER YOUR CREDIT CARD DETAILS</h1>
     <br>
-        <fieldset class="form">
-            <fieldset><legend>USERNAME</legend><input type="text" class="in"></div></fieldset><BR>
-            <fieldset><legend>PASSWORD</legend><input type="password" class="in"></div></fieldset><br>
-            <fieldset><legend>AMOUNT TO BE PAID</legend><p id="amt1"></p></fieldset><BR>
-                <fieldset><legend>BILLING ADDRESS</legend><input type="text" class="in" placeholder="Enter your address here"></div></fieldset><BR>
-            <div id="divi"><input type="submit" id="sub" onclick=paid()></div>
-            <script>
-                var amount = window.localStorage.getItem("amt");
-                document.getElementById("amt1").innerHTML = amount;
+    <div class="container2">
+        <form action="#" class="form">
+            <div class="row">
+                <div class="col">
+                    <h3 class="title">
+                        Billing Details
+                    </h3>
+                    <div class="inputBox">
+                        <label for="name">
+                              Full Name:
+                          </label>
+                        <input type="text" id="name" 
+                               placeholder="Enter your full name" 
+                               required>
+                    </div>
 
-                function paid(){
-                    Swal.fire({
-                        title: 'Succesfully Paid!',
-                        text: 'Thank you for choosing Green Leaf',
-                        icon: 'success',
-                        //showCancelButton: true,
-                        confirmButtonText: '&#128522',
-                        //cancelButtonText: 'No, cancel!',
-                        confirmButtonColor: '#023402',
-                        //cancelButtonColor: '#d33'
-                    }).then((result)=>{
-                        localStorage.clear();
-                        window.localStorage.setItem("SignIn","true");
-                        location.href = "../index.html";
-                    })
-                }
-            </script>
-        </fieldset>
+                    <div class="inputBox">
+                        <label for="email">
+                              Username:
+                          </label>
+                        <input type="text" id="upi" 
+                               placeholder="Enter email address" 
+                               required>
+                    </div>
+
+                    <div class="inputBox">
+                        <label for="address">
+                              Address:
+                          </label>
+                        <input type="text" id="address" 
+                               placeholder="Enter address" 
+                               required>
+                    </div>
+
+                    <div class="inputBox">
+                        <label for="city">
+                              City:
+                          </label>
+                        <input type="text" id="city" 
+                               placeholder="Enter city" 
+                               required>
+                    </div>
+
+                    <div class="flex">
+
+                        <div class="inputBox">
+                            <label for="state">
+                                  State:
+                              </label>
+                            <input type="text" id="state" 
+                                   placeholder="Enter state" 
+                                   required>
+                        </div>
+
+                        <div class="inputBox">
+                            <label for="zip">
+                                  Pin Code:
+                              </label>
+                            <input type="number" id="zip" 
+                                   placeholder="123 456" 
+                                   required>
+                        </div>
+
+                    </div>
+
+                </div>
+                
+
+                </div>
+
+            </div><!---->
+
+                   <div id="divi"><input type="submit" class="submit_btn" id="sub" value="Proceed to Checkout" onclick=paid()></div>
+                   <script>    
+                       function paid(){
+                        var arr = ["name","upi","address","city","state","zip"];
+                        for(var i=0;i<6;i++){
+                            if(!document.getElementById(arr[i]).value){
+                               Swal.fire({
+                                title: 'Incorrect Details!',
+                                text: 'Please fill correct details',
+                                icon: 'error',
+                                //showCancelButton: true,
+                                confirmButtonText: 'OK',
+                                //cancelButtonText: 'No, cancel!',
+                                confirmButtonColor: 'transparent',
+                                //cancelButtonColor: '#d33'
+                           })
+                                return;
+                            }
+                            
+                        }
+                        
+                            Swal.fire({
+                               title: 'Succesfully Paid!',
+                               text: 'Thank you for choosing Green Leaf',
+                               icon: 'success',
+                               //showCancelButton: true,
+                               confirmButtonText: '&#128522',
+                               //cancelButtonText: 'No, cancel!',
+                               confirmButtonColor: '#023402',
+                               //cancelButtonColor: '#d33'
+                           }).then((result)=>{
+                               localStorage.clear();
+                               window.localStorage.setItem("SignIn","true");
+                               location.href = "../index.html";
+                           })
+                        
+                           
+                       }
+                   </script>
+        </form>
+    </div>
+        
 <br>
 <br>
 <img src="../images/trees_footer.png" width="100%">
